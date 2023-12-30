@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PoliceStation.PoliceStationDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,30 @@ namespace PoliceStation
         public Form4()
         {
             InitializeComponent();
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'policeStationDataSet.InventoryTable' table. You can move, or remove it, as needed.
+            this.inventoryTableTableAdapter.Fill(this.policeStationDataSet.InventoryTable);
+
+        }
+
+        private void addInventory_Click(object sender, EventArgs e)
+        {
+            inventoryTableBindingSource.AddNew();
+        }
+
+        private void saveInventory_Click(object sender, EventArgs e)
+        {
+            inventoryTableBindingSource.EndEdit();
+            inventoryTableTableAdapter.Update(policeStationDataSet.InventoryTable);
+        }
+
+        private void deleteInventory_Click(object sender, EventArgs e)
+        {
+            inventoryTableBindingSource.RemoveCurrent();
+            inventoryTableTableAdapter.Update(policeStationDataSet.InventoryTable);
         }
     }
 }
