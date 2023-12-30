@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.saveEmployee = new System.Windows.Forms.Button();
             this.addEmployee = new System.Windows.Forms.Button();
             this.idAdd = new System.Windows.Forms.TextBox();
+            this.employeesTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.policeStationDataSet = new PoliceStation.PoliceStationDataSet();
             this.label5 = new System.Windows.Forms.Label();
             this.hourlyRate = new System.Windows.Forms.TextBox();
             this.name = new System.Windows.Forms.TextBox();
@@ -48,19 +51,19 @@
             this.label8 = new System.Windows.Forms.Label();
             this.deleteEmployee = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.employeesTableTableAdapter = new PoliceStation.PoliceStationDataSetTableAdapters.EmployeesTableTableAdapter();
-            this.policeStationDataSet = new PoliceStation.PoliceStationDataSet();
-            this.employeesTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateOfBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hourlyRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeesTableTableAdapter = new PoliceStation.PoliceStationDataSetTableAdapters.EmployeesTableTableAdapter();
             this.removeFilterEmployees = new System.Windows.Forms.Button();
             this.printEmployees = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).BeginInit();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.employeesTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // saveEmployee
@@ -92,6 +95,16 @@
             this.idAdd.Name = "idAdd";
             this.idAdd.Size = new System.Drawing.Size(164, 26);
             this.idAdd.TabIndex = 24;
+            // 
+            // employeesTableBindingSource
+            // 
+            this.employeesTableBindingSource.DataMember = "EmployeesTable";
+            this.employeesTableBindingSource.DataSource = this.policeStationDataSet;
+            // 
+            // policeStationDataSet
+            // 
+            this.policeStationDataSet.DataSetName = "PoliceStationDataSet";
+            this.policeStationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label5
             // 
@@ -263,20 +276,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(844, 676);
             this.dataGridView1.TabIndex = 35;
             // 
-            // employeesTableTableAdapter
-            // 
-            this.employeesTableTableAdapter.ClearBeforeFill = true;
-            // 
-            // policeStationDataSet
-            // 
-            this.policeStationDataSet.DataSetName = "PoliceStationDataSet";
-            this.policeStationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeesTableBindingSource
-            // 
-            this.employeesTableBindingSource.DataMember = "EmployeesTable";
-            this.employeesTableBindingSource.DataSource = this.policeStationDataSet;
-            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
@@ -312,6 +311,10 @@
             this.hourlyRateDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.hourlyRateDataGridViewTextBoxColumn.Name = "hourlyRateDataGridViewTextBoxColumn";
             // 
+            // employeesTableTableAdapter
+            // 
+            this.employeesTableTableAdapter.ClearBeforeFill = true;
+            // 
             // removeFilterEmployees
             // 
             this.removeFilterEmployees.AutoSize = true;
@@ -331,6 +334,21 @@
             this.printEmployees.TabIndex = 59;
             this.printEmployees.Text = "Print";
             this.printEmployees.UseVisualStyleBackColor = true;
+            this.printEmployees.Click += new System.EventHandler(this.printEmployees_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // Form1
             // 
@@ -361,9 +379,9 @@
             this.Name = "Form1";
             this.Text = "Employees";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,6 +418,8 @@
         private PoliceStationDataSet policeStationDataSet;
         private System.Windows.Forms.Button removeFilterEmployees;
         private System.Windows.Forms.Button printEmployees;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
 
