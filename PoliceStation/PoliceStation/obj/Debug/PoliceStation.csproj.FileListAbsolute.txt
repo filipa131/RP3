@@ -1,0 +1,11 @@
+C:\Users\Lenovo\Desktop\PoliceStation\PoliceStation\bin\Debug\PoliceStation.exe.config
+C:\Users\Lenovo\Desktop\PoliceStation\PoliceStation\bin\Debug\PoliceStation.exe
+C:\Users\Lenovo\Desktop\PoliceStation\PoliceStation\bin\Debug\PoliceStation.pdb
+C:\Users\Lenovo\Desktop\PoliceStation\PoliceStation\obj\Debug\PoliceStation.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\PoliceStation\PoliceStation\obj\Debug\PoliceStation.Form1.resources
+C:\Users\Lenovo\Desktop\PoliceStation\PoliceStation\obj\Debug\PoliceStation.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\PoliceStation\PoliceStation\obj\Debug\PoliceStation.csproj.GenerateResource.cache
+C:\Users\Lenovo\Desktop\PoliceStation\PoliceStation\obj\Debug\PoliceStation.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\PoliceStation\PoliceStation\obj\Debug\PoliceStation.exe
+C:\Users\Lenovo\Desktop\PoliceStation\PoliceStation\obj\Debug\PoliceStation.pdb
+C:\Users\Lenovo\Desktop\PoliceStation\PoliceStation\obj\Debug\PoliceStation.Form4.resources
