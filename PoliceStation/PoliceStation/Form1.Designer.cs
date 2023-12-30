@@ -202,6 +202,7 @@
             this.filterEmployee.TabIndex = 31;
             this.filterEmployee.Text = "Filter";
             this.filterEmployee.UseVisualStyleBackColor = true;
+            this.filterEmployee.Click += new System.EventHandler(this.filterEmployee_Click);
             // 
             // idFilter
             // 
@@ -231,7 +232,7 @@
             "Crime Scene Units",
             "Administrative Division",
             "Internal Affairs"});
-            this.departmentFilter.Location = new System.Drawing.Point(32, 750);
+            this.departmentFilter.Location = new System.Drawing.Point(35, 746);
             this.departmentFilter.Name = "departmentFilter";
             this.departmentFilter.Size = new System.Drawing.Size(164, 28);
             this.departmentFilter.TabIndex = 28;
@@ -239,7 +240,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(28, 717);
+            this.label8.Location = new System.Drawing.Point(31, 713);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(153, 20);
             this.label8.TabIndex = 27;

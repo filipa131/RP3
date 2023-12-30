@@ -54,5 +54,11 @@ namespace PoliceStation
             printPreviewDialog1.PrintPreviewControl.Zoom = 1;
             printPreviewDialog1.ShowDialog();
         }
+
+        private void filterEmployee_Click(object sender, EventArgs e)
+        {
+            //(dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
+                //String.Format("ID like '%" + idFilter + "%'");
+        }
     }
 }
