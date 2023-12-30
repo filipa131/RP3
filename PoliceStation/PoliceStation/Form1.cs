@@ -12,6 +12,7 @@ namespace PoliceStation
 {
     public partial class Form1 : Form
     {
+        private Form currentContentForm;
         public Form1()
         {
             InitializeComponent();
@@ -59,6 +60,50 @@ namespace PoliceStation
         {
             //(dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
                 //String.Format("ID like '%" + idFilter + "%'");
+        }
+
+        private void ChangeContent(Form newForm)
+        {
+            if (currentContentForm == newForm)
+            {
+                currentContentForm.BringToFront();
+                return;
+            }
+
+            if (currentContentForm != null)
+            {
+                Controls.Remove(currentContentForm); 
+                currentContentForm.Dispose(); 
+            }
+
+            newForm.TopLevel = false;
+            newForm.FormBorderStyle = FormBorderStyle.None;
+            newForm.Dock = DockStyle.Fill;
+            Controls.Add(newForm); 
+            newForm.Show();
+
+            currentContentForm = newForm;
+        }
+
+
+        private void employeesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //ChangeContent(new Form1());
+        }
+
+        private void shiftsToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            //ChangeContent(new Form2());
+        }
+
+        private void casesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            //ChangeContent(new Form3());
+        }
+
+        private void inventoryToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            //ChangeContent(new Form4());
         }
     }
 }

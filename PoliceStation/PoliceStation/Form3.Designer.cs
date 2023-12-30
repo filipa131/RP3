@@ -33,6 +33,8 @@
             System.Windows.Forms.TextBox description;
             System.Windows.Forms.TextBox noFilter;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            this.casesTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.policeStationDataSet2 = new PoliceStation.PoliceStationDataSet2();
             this.dateShift = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.deleteShift = new System.Windows.Forms.Button();
@@ -52,29 +54,67 @@
             this.printCases = new System.Windows.Forms.Button();
             this.removeFilterCases = new System.Windows.Forms.Button();
             this.filterCases = new System.Windows.Forms.Button();
-            this.policeStationDataSet2 = new PoliceStation.PoliceStationDataSet2();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.casesTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.casesTableTableAdapter = new PoliceStation.PoliceStationDataSet2TableAdapters.CasesTableTableAdapter();
             this.noDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeOfCaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateOfModificationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.casesTableTableAdapter = new PoliceStation.PoliceStationDataSet2TableAdapters.CasesTableTableAdapter();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.employeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shiftsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.casesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             No = new System.Windows.Forms.TextBox();
             description = new System.Windows.Forms.TextBox();
             noFilter = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.casesTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.casesTableBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // No
+            // 
+            No.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casesTableBindingSource, "No", true));
+            No.Location = new System.Drawing.Point(19, 95);
+            No.Name = "No";
+            No.Size = new System.Drawing.Size(164, 26);
+            No.TabIndex = 72;
+            // 
+            // casesTableBindingSource
+            // 
+            this.casesTableBindingSource.DataMember = "CasesTable";
+            this.casesTableBindingSource.DataSource = this.policeStationDataSet2;
+            // 
+            // policeStationDataSet2
+            // 
+            this.policeStationDataSet2.DataSetName = "PoliceStationDataSet2";
+            this.policeStationDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // description
+            // 
+            description.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casesTableBindingSource, "Description", true));
+            description.Location = new System.Drawing.Point(25, 358);
+            description.Multiline = true;
+            description.Name = "description";
+            description.Size = new System.Drawing.Size(164, 26);
+            description.TabIndex = 81;
+            // 
+            // noFilter
+            // 
+            noFilter.Location = new System.Drawing.Point(25, 674);
+            noFilter.Name = "noFilter";
+            noFilter.Size = new System.Drawing.Size(164, 26);
+            noFilter.TabIndex = 85;
             // 
             // dateShift
             // 
             this.dateShift.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casesTableBindingSource, "Date of Modification", true));
-            this.dateShift.Location = new System.Drawing.Point(34, 438);
+            this.dateShift.Location = new System.Drawing.Point(28, 456);
             this.dateShift.Name = "dateShift";
             this.dateShift.Size = new System.Drawing.Size(200, 26);
             this.dateShift.TabIndex = 77;
@@ -82,7 +122,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 403);
+            this.label3.Location = new System.Drawing.Point(24, 421);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(151, 20);
             this.label3.TabIndex = 76;
@@ -91,7 +131,7 @@
             // deleteShift
             // 
             this.deleteShift.AutoSize = true;
-            this.deleteShift.Location = new System.Drawing.Point(79, 562);
+            this.deleteShift.Location = new System.Drawing.Point(73, 580);
             this.deleteShift.Name = "deleteShift";
             this.deleteShift.Size = new System.Drawing.Size(75, 30);
             this.deleteShift.TabIndex = 75;
@@ -102,7 +142,7 @@
             // saveShift
             // 
             this.saveShift.AutoSize = true;
-            this.saveShift.Location = new System.Drawing.Point(136, 509);
+            this.saveShift.Location = new System.Drawing.Point(130, 527);
             this.saveShift.Name = "saveShift";
             this.saveShift.Size = new System.Drawing.Size(75, 30);
             this.saveShift.TabIndex = 74;
@@ -113,21 +153,13 @@
             // addShift
             // 
             this.addShift.AutoSize = true;
-            this.addShift.Location = new System.Drawing.Point(34, 509);
+            this.addShift.Location = new System.Drawing.Point(28, 527);
             this.addShift.Name = "addShift";
             this.addShift.Size = new System.Drawing.Size(75, 30);
             this.addShift.TabIndex = 73;
             this.addShift.Text = "Add";
             this.addShift.UseVisualStyleBackColor = true;
             this.addShift.Click += new System.EventHandler(this.addShift_Click);
-            // 
-            // No
-            // 
-            No.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casesTableBindingSource, "No", true));
-            No.Location = new System.Drawing.Point(25, 77);
-            No.Name = "No";
-            No.Size = new System.Drawing.Size(164, 26);
-            No.TabIndex = 72;
             // 
             // typeOfCase
             // 
@@ -143,7 +175,7 @@
             "Cyber Crimes",
             "Missing Persons",
             "Public Order Offenses"});
-            this.typeOfCase.Location = new System.Drawing.Point(28, 161);
+            this.typeOfCase.Location = new System.Drawing.Point(22, 179);
             this.typeOfCase.Name = "typeOfCase";
             this.typeOfCase.Size = new System.Drawing.Size(164, 28);
             this.typeOfCase.TabIndex = 71;
@@ -151,7 +183,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 128);
+            this.label2.Location = new System.Drawing.Point(18, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 20);
             this.label2.TabIndex = 70;
@@ -160,7 +192,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 40);
+            this.label1.Location = new System.Drawing.Point(18, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 20);
             this.label1.TabIndex = 69;
@@ -180,7 +212,7 @@
             "Pending Prosecution",
             "Awaiting Trial",
             "Solved"});
-            this.status.Location = new System.Drawing.Point(31, 246);
+            this.status.Location = new System.Drawing.Point(25, 264);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(164, 28);
             this.status.TabIndex = 79;
@@ -188,25 +220,16 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 213);
+            this.label4.Location = new System.Drawing.Point(21, 231);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 20);
             this.label4.TabIndex = 78;
             this.label4.Text = "Status";
             // 
-            // description
-            // 
-            description.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casesTableBindingSource, "Description", true));
-            description.Location = new System.Drawing.Point(31, 340);
-            description.Multiline = true;
-            description.Name = "description";
-            description.Size = new System.Drawing.Size(164, 26);
-            description.TabIndex = 81;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(30, 303);
+            this.label5.Location = new System.Drawing.Point(24, 321);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 20);
             this.label5.TabIndex = 80;
@@ -225,7 +248,7 @@
             "Pending Prosecution",
             "Awaiting Trial",
             "Solved"});
-            this.statusFilter.Location = new System.Drawing.Point(37, 825);
+            this.statusFilter.Location = new System.Drawing.Point(31, 843);
             this.statusFilter.Name = "statusFilter";
             this.statusFilter.Size = new System.Drawing.Size(164, 28);
             this.statusFilter.TabIndex = 87;
@@ -233,18 +256,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(33, 792);
+            this.label6.Location = new System.Drawing.Point(27, 810);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(115, 20);
             this.label6.TabIndex = 86;
             this.label6.Text = "Filter by Status";
-            // 
-            // noFilter
-            // 
-            noFilter.Location = new System.Drawing.Point(31, 656);
-            noFilter.Name = "noFilter";
-            noFilter.Size = new System.Drawing.Size(164, 26);
-            noFilter.TabIndex = 85;
             // 
             // typeOfCaseFilter
             // 
@@ -259,7 +275,7 @@
             "Cyber Crimes",
             "Missing Persons",
             "Public Order Offenses"});
-            this.typeOfCaseFilter.Location = new System.Drawing.Point(34, 740);
+            this.typeOfCaseFilter.Location = new System.Drawing.Point(28, 758);
             this.typeOfCaseFilter.Name = "typeOfCaseFilter";
             this.typeOfCaseFilter.Size = new System.Drawing.Size(164, 28);
             this.typeOfCaseFilter.TabIndex = 84;
@@ -267,7 +283,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(30, 707);
+            this.label7.Location = new System.Drawing.Point(24, 725);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(161, 20);
             this.label7.TabIndex = 83;
@@ -276,7 +292,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(30, 619);
+            this.label8.Location = new System.Drawing.Point(24, 637);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(88, 20);
             this.label8.TabIndex = 82;
@@ -285,7 +301,7 @@
             // printCases
             // 
             this.printCases.AutoSize = true;
-            this.printCases.Location = new System.Drawing.Point(1153, 812);
+            this.printCases.Location = new System.Drawing.Point(1147, 830);
             this.printCases.Name = "printCases";
             this.printCases.Size = new System.Drawing.Size(75, 30);
             this.printCases.TabIndex = 88;
@@ -296,7 +312,7 @@
             // removeFilterCases
             // 
             this.removeFilterCases.AutoSize = true;
-            this.removeFilterCases.Location = new System.Drawing.Point(343, 823);
+            this.removeFilterCases.Location = new System.Drawing.Point(337, 841);
             this.removeFilterCases.Name = "removeFilterCases";
             this.removeFilterCases.Size = new System.Drawing.Size(117, 30);
             this.removeFilterCases.TabIndex = 91;
@@ -306,17 +322,12 @@
             // filterCases
             // 
             this.filterCases.AutoSize = true;
-            this.filterCases.Location = new System.Drawing.Point(262, 823);
+            this.filterCases.Location = new System.Drawing.Point(256, 841);
             this.filterCases.Name = "filterCases";
             this.filterCases.Size = new System.Drawing.Size(75, 30);
             this.filterCases.TabIndex = 90;
             this.filterCases.Text = "Filter";
             this.filterCases.UseVisualStyleBackColor = true;
-            // 
-            // policeStationDataSet2
-            // 
-            this.policeStationDataSet2.DataSetName = "PoliceStationDataSet2";
-            this.policeStationDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridView1
             // 
@@ -331,21 +342,12 @@
             this.descriptionDataGridViewTextBoxColumn,
             this.dateOfModificationDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.casesTableBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(303, 77);
+            this.dataGridView1.Location = new System.Drawing.Point(297, 95);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(925, 710);
             this.dataGridView1.TabIndex = 92;
-            // 
-            // casesTableBindingSource
-            // 
-            this.casesTableBindingSource.DataMember = "CasesTable";
-            this.casesTableBindingSource.DataSource = this.policeStationDataSet2;
-            // 
-            // casesTableTableAdapter
-            // 
-            this.casesTableTableAdapter.ClearBeforeFill = true;
             // 
             // noDataGridViewTextBoxColumn
             // 
@@ -382,6 +384,10 @@
             this.dateOfModificationDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.dateOfModificationDataGridViewTextBoxColumn.Name = "dateOfModificationDataGridViewTextBoxColumn";
             // 
+            // casesTableTableAdapter
+            // 
+            this.casesTableTableAdapter.ClearBeforeFill = true;
+            // 
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
@@ -396,11 +402,55 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.employeesToolStripMenuItem,
+            this.shiftsToolStripMenuItem,
+            this.casesToolStripMenuItem,
+            this.inventoryToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1253, 33);
+            this.menuStrip1.TabIndex = 93;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // employeesToolStripMenuItem
+            // 
+            this.employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
+            this.employeesToolStripMenuItem.Size = new System.Drawing.Size(114, 29);
+            this.employeesToolStripMenuItem.Text = "Employees";
+            this.employeesToolStripMenuItem.Click += new System.EventHandler(this.employeesToolStripMenuItem_Click_1);
+            // 
+            // shiftsToolStripMenuItem
+            // 
+            this.shiftsToolStripMenuItem.Name = "shiftsToolStripMenuItem";
+            this.shiftsToolStripMenuItem.Size = new System.Drawing.Size(72, 29);
+            this.shiftsToolStripMenuItem.Text = "Shifts";
+            this.shiftsToolStripMenuItem.Click += new System.EventHandler(this.shiftsToolStripMenuItem_Click_1);
+            // 
+            // casesToolStripMenuItem
+            // 
+            this.casesToolStripMenuItem.Name = "casesToolStripMenuItem";
+            this.casesToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
+            this.casesToolStripMenuItem.Text = "Cases";
+            this.casesToolStripMenuItem.Click += new System.EventHandler(this.casesToolStripMenuItem_Click_1);
+            // 
+            // inventoryToolStripMenuItem
+            // 
+            this.inventoryToolStripMenuItem.Name = "inventoryToolStripMenuItem";
+            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(103, 29);
+            this.inventoryToolStripMenuItem.Text = "Inventory";
+            this.inventoryToolStripMenuItem.Click += new System.EventHandler(this.inventoryToolStripMenuItem_Click_1);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1253, 865);
+            this.ClientSize = new System.Drawing.Size(1253, 884);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.removeFilterCases);
             this.Controls.Add(this.filterCases);
@@ -427,9 +477,11 @@
             this.Name = "Form3";
             this.Text = "Cases";
             this.Load += new System.EventHandler(this.Form3_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.casesTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.casesTableBindingSource)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,5 +519,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dateOfModificationDataGridViewTextBoxColumn;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem employeesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem shiftsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem casesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem;
     }
 }
