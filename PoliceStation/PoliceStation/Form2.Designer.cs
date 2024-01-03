@@ -61,6 +61,8 @@
             this.shiftsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.casesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label6 = new System.Windows.Forms.Label();
+            this.sortShifts = new System.Windows.Forms.ComboBox();
             idShifts = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.shiftsTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet1BindingSource)).BeginInit();
@@ -357,11 +359,35 @@
             this.inventoryToolStripMenuItem.Text = "Inventory";
             this.inventoryToolStripMenuItem.Click += new System.EventHandler(this.inventoryToolStripMenuItem_Click_1);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(247, 54);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 20);
+            this.label6.TabIndex = 79;
+            this.label6.Text = "Sort";
+            // 
+            // sortShifts
+            // 
+            this.sortShifts.FormattingEnabled = true;
+            this.sortShifts.Items.AddRange(new object[] {
+            "ID",
+            "Shift",
+            "Date"});
+            this.sortShifts.Location = new System.Drawing.Point(302, 51);
+            this.sortShifts.Name = "sortShifts";
+            this.sortShifts.Size = new System.Drawing.Size(121, 28);
+            this.sortShifts.TabIndex = 80;
+            this.sortShifts.SelectedIndexChanged += new System.EventHandler(this.sortShifts_SelectedIndexChanged);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1078, 804);
+            this.Controls.Add(this.sortShifts);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.printShifts);
             this.Controls.Add(this.dataGridView1);
@@ -426,5 +452,7 @@
         private System.Windows.Forms.ToolStripMenuItem shiftsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem casesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox sortShifts;
     }
 }

@@ -68,6 +68,8 @@
             this.shiftsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.casesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sortCases = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             No = new System.Windows.Forms.TextBox();
             description = new System.Windows.Forms.TextBox();
             noFilter = new System.Windows.Forms.TextBox();
@@ -445,11 +447,36 @@
             this.inventoryToolStripMenuItem.Text = "Inventory";
             this.inventoryToolStripMenuItem.Click += new System.EventHandler(this.inventoryToolStripMenuItem_Click_1);
             // 
+            // sortCases
+            // 
+            this.sortCases.FormattingEnabled = true;
+            this.sortCases.Items.AddRange(new object[] {
+            "No",
+            "Type of Case",
+            "Status",
+            "Date of Modification"});
+            this.sortCases.Location = new System.Drawing.Point(348, 55);
+            this.sortCases.Name = "sortCases";
+            this.sortCases.Size = new System.Drawing.Size(121, 28);
+            this.sortCases.TabIndex = 95;
+            this.sortCases.SelectedIndexChanged += new System.EventHandler(this.sortCases_SelectedIndexChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(293, 58);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(39, 20);
+            this.label9.TabIndex = 94;
+            this.label9.Text = "Sort";
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1253, 884);
+            this.Controls.Add(this.sortCases);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.removeFilterCases);
@@ -524,5 +551,7 @@
         private System.Windows.Forms.ToolStripMenuItem shiftsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem casesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem;
+        private System.Windows.Forms.ComboBox sortCases;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -79,5 +79,12 @@ namespace PoliceStation
             Form4 f4 = new Form4();
             f4.ShowDialog();
         }
+
+        private void sortInventory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataView dv = policeStationDataSet.InventoryTable.DefaultView;
+            dv.Sort = sortInventory.SelectedItem.ToString();
+            dataGridView1.DataSource = dv.ToTable();
+        }
     }
 }

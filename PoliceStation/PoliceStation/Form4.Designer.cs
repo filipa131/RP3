@@ -63,6 +63,8 @@
             this.shiftsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.casesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label6 = new System.Windows.Forms.Label();
+            this.sortInventory = new System.Windows.Forms.ComboBox();
             policeInventory = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).BeginInit();
@@ -373,11 +375,36 @@
             this.inventoryToolStripMenuItem.Text = "Inventory";
             this.inventoryToolStripMenuItem.Click += new System.EventHandler(this.inventoryToolStripMenuItem_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(249, 86);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 20);
+            this.label6.TabIndex = 64;
+            this.label6.Text = "Sort";
+            // 
+            // sortInventory
+            // 
+            this.sortInventory.FormattingEnabled = true;
+            this.sortInventory.Items.AddRange(new object[] {
+            "Police Inventory",
+            "S No",
+            "Inventory Type",
+            "Quantity"});
+            this.sortInventory.Location = new System.Drawing.Point(307, 83);
+            this.sortInventory.Name = "sortInventory";
+            this.sortInventory.Size = new System.Drawing.Size(121, 28);
+            this.sortInventory.TabIndex = 63;
+            this.sortInventory.SelectedIndexChanged += new System.EventHandler(this.sortInventory_SelectedIndexChanged);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1138, 875);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.sortInventory);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.printInventory);
             this.Controls.Add(this.removeFilterInventory);
@@ -445,5 +472,7 @@
         private System.Windows.Forms.ToolStripMenuItem shiftsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem casesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox sortInventory;
     }
 }

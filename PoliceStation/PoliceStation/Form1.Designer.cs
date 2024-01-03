@@ -66,6 +66,8 @@
             this.shiftsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.casesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sortEmployees = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.employeesTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -400,11 +402,37 @@
             this.inventoryToolStripMenuItem.Text = "Inventory";
             this.inventoryToolStripMenuItem.Click += new System.EventHandler(this.inventoryToolStripMenuItem_Click_1);
             // 
+            // sortEmployees
+            // 
+            this.sortEmployees.FormattingEnabled = true;
+            this.sortEmployees.Items.AddRange(new object[] {
+            "Name",
+            "ID",
+            "Department",
+            "Date of Birth",
+            "Hourly Rate"});
+            this.sortEmployees.Location = new System.Drawing.Point(344, 57);
+            this.sortEmployees.Name = "sortEmployees";
+            this.sortEmployees.Size = new System.Drawing.Size(121, 28);
+            this.sortEmployees.TabIndex = 61;
+            this.sortEmployees.SelectedIndexChanged += new System.EventHandler(this.sortEmployees_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(286, 60);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 20);
+            this.label6.TabIndex = 62;
+            this.label6.Text = "Sort";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1160, 850);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.sortEmployees);
             this.Controls.Add(this.printEmployees);
             this.Controls.Add(this.removeFilterEmployees);
             this.Controls.Add(this.dataGridView1);
@@ -479,6 +507,8 @@
         private System.Windows.Forms.ToolStripMenuItem shiftsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem casesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem;
+        private System.Windows.Forms.ComboBox sortEmployees;
+        private System.Windows.Forms.Label label6;
     }
 }
 

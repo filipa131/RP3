@@ -105,5 +105,12 @@ namespace PoliceStation
         {
             //ChangeContent(new Form4());
         }
+
+        private void sortEmployees_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataView dv = policeStationDataSet.EmployeesTable.DefaultView;
+            dv.Sort = sortEmployees.SelectedItem.ToString();
+            dataGridView1.DataSource = dv.ToTable();
+        }
     }
 }
