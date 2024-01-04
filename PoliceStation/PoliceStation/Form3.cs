@@ -24,6 +24,7 @@ namespace PoliceStation
 
         }
 
+        // ADD, SAVE, DELETE:
         private void addShift_Click(object sender, EventArgs e)
         {
             casesTableBindingSource.AddNew();
@@ -41,6 +42,7 @@ namespace PoliceStation
             casesTableTableAdapter.Update(policeStationDataSet2.CasesTable);
         }
 
+        // PRINT:
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             Bitmap imagebmp = new Bitmap(dataGridView1.Width, dataGridView1.Height);
@@ -55,6 +57,7 @@ namespace PoliceStation
             printPreviewDialog1.ShowDialog();
         }
 
+        // STRIP MENU - TO DO:
         private void employeesToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             Form1 f1 = new Form1();
@@ -78,11 +81,72 @@ namespace PoliceStation
             Form4 f4 = new Form4();
             f4.ShowDialog();
         }
-
+        
+        // SORT:
         private void sortCases_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataView dv = policeStationDataSet2.CasesTable.DefaultView;
             dv.Sort = sortCases.SelectedItem.ToString();
+            dataGridView1.DataSource = dv.ToTable();
+        }
+
+        // FILTERS:
+        private void filterCases_Click(object sender, EventArgs e)
+        {
+            DataView dv = policeStationDataSet2.CasesTable.DefaultView;
+            string filterText = noFilter.Text.Trim();
+
+            if (!string.IsNullOrEmpty(filterText))
+            {
+                dv.RowFilter = $"Convert(No, 'System.String') = '{filterText}'";
+            }
+            else
+            {
+                dv.RowFilter = string.Empty;
+            }
+
+            dataGridView1.DataSource = dv.ToTable();
+        }
+
+        private void typeOfCaseFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataView dv = policeStationDataSet2.CasesTable.DefaultView;
+            string selectedValue = typeOfCaseFilter.SelectedItem?.ToString();
+
+            if (!string.IsNullOrEmpty(selectedValue))
+            {
+                dv.RowFilter = $"[Type of Case] = '{selectedValue}'";
+            }
+            else
+            {
+                dv.RowFilter = string.Empty;
+            }
+
+            dataGridView1.DataSource = dv.ToTable();
+        }
+
+        private void statusFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataView dv = policeStationDataSet2.CasesTable.DefaultView;
+            string selectedValue = statusFilter.SelectedItem?.ToString();
+
+            if (!string.IsNullOrEmpty(selectedValue))
+            {
+                dv.RowFilter = $"Status = '{selectedValue}'";
+            }
+            else
+            {
+                dv.RowFilter = string.Empty;
+            }
+
+            dataGridView1.DataSource = dv.ToTable();
+        }
+
+        private void removeFilterCases_Click(object sender, EventArgs e)
+        {
+            DataView dv = policeStationDataSet2.CasesTable.DefaultView;
+            dv.RowFilter = string.Empty;
+
             dataGridView1.DataSource = dv.ToTable();
         }
     }

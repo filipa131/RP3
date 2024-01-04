@@ -99,6 +99,7 @@
             this.filterInventory.TabIndex = 54;
             this.filterInventory.Text = "Filter";
             this.filterInventory.UseVisualStyleBackColor = true;
+            this.filterInventory.Click += new System.EventHandler(this.filterInventory_Click);
             // 
             // sNoFilter
             // 
@@ -120,18 +121,20 @@
             // 
             this.inventoryTypeFilter.FormattingEnabled = true;
             this.inventoryTypeFilter.Items.AddRange(new object[] {
-            "Patrol Division",
-            "Investigations Division",
-            "Special Operations",
-            "Highway Patrol",
-            "Community Services",
-            "Crime Scene Units",
-            "Administrative Division",
-            "Internal Affairs"});
+            "Weapons and Ammunition",
+            "Communication Devices",
+            "Protective Gear",
+            "Vehicles",
+            "Technology and Tools",
+            "Office Supplies",
+            "Training Equipment",
+            "Medical Supplies",
+            "Miscellaneous"});
             this.inventoryTypeFilter.Location = new System.Drawing.Point(34, 760);
             this.inventoryTypeFilter.Name = "inventoryTypeFilter";
             this.inventoryTypeFilter.Size = new System.Drawing.Size(164, 28);
             this.inventoryTypeFilter.TabIndex = 51;
+            this.inventoryTypeFilter.SelectedIndexChanged += new System.EventHandler(this.inventoryTypeFilter_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -306,6 +309,7 @@
             this.removeFilterInventory.TabIndex = 57;
             this.removeFilterInventory.Text = "Remove Filter";
             this.removeFilterInventory.UseVisualStyleBackColor = true;
+            this.removeFilterInventory.Click += new System.EventHandler(this.removeFilterInventory_Click);
             // 
             // printInventory
             // 

@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TextBox No;
             System.Windows.Forms.TextBox description;
-            System.Windows.Forms.TextBox noFilter;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.casesTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.policeStationDataSet2 = new PoliceStation.PoliceStationDataSet2();
@@ -70,9 +69,9 @@
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sortCases = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.noFilter = new System.Windows.Forms.TextBox();
             No = new System.Windows.Forms.TextBox();
             description = new System.Windows.Forms.TextBox();
-            noFilter = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.casesTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -105,13 +104,6 @@
             description.Name = "description";
             description.Size = new System.Drawing.Size(164, 26);
             description.TabIndex = 81;
-            // 
-            // noFilter
-            // 
-            noFilter.Location = new System.Drawing.Point(25, 674);
-            noFilter.Name = "noFilter";
-            noFilter.Size = new System.Drawing.Size(164, 26);
-            noFilter.TabIndex = 85;
             // 
             // dateShift
             // 
@@ -254,6 +246,7 @@
             this.statusFilter.Name = "statusFilter";
             this.statusFilter.Size = new System.Drawing.Size(164, 28);
             this.statusFilter.TabIndex = 87;
+            this.statusFilter.SelectedIndexChanged += new System.EventHandler(this.statusFilter_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -281,6 +274,7 @@
             this.typeOfCaseFilter.Name = "typeOfCaseFilter";
             this.typeOfCaseFilter.Size = new System.Drawing.Size(164, 28);
             this.typeOfCaseFilter.TabIndex = 84;
+            this.typeOfCaseFilter.SelectedIndexChanged += new System.EventHandler(this.typeOfCaseFilter_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -320,6 +314,7 @@
             this.removeFilterCases.TabIndex = 91;
             this.removeFilterCases.Text = "Remove Filter";
             this.removeFilterCases.UseVisualStyleBackColor = true;
+            this.removeFilterCases.Click += new System.EventHandler(this.removeFilterCases_Click);
             // 
             // filterCases
             // 
@@ -330,6 +325,7 @@
             this.filterCases.TabIndex = 90;
             this.filterCases.Text = "Filter";
             this.filterCases.UseVisualStyleBackColor = true;
+            this.filterCases.Click += new System.EventHandler(this.filterCases_Click);
             // 
             // dataGridView1
             // 
@@ -470,11 +466,19 @@
             this.label9.TabIndex = 94;
             this.label9.Text = "Sort";
             // 
+            // noFilter
+            // 
+            this.noFilter.Location = new System.Drawing.Point(31, 674);
+            this.noFilter.Name = "noFilter";
+            this.noFilter.Size = new System.Drawing.Size(164, 26);
+            this.noFilter.TabIndex = 96;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1253, 884);
+            this.Controls.Add(this.noFilter);
             this.Controls.Add(this.sortCases);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.menuStrip1);
@@ -484,7 +488,6 @@
             this.Controls.Add(this.printCases);
             this.Controls.Add(this.statusFilter);
             this.Controls.Add(this.label6);
-            this.Controls.Add(noFilter);
             this.Controls.Add(this.typeOfCaseFilter);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
@@ -553,5 +556,6 @@
         private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem;
         private System.Windows.Forms.ComboBox sortCases;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox noFilter;
     }
 }

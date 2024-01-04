@@ -244,6 +244,7 @@
             this.departmentFilter.Name = "departmentFilter";
             this.departmentFilter.Size = new System.Drawing.Size(164, 28);
             this.departmentFilter.TabIndex = 28;
+            this.departmentFilter.SelectedIndexChanged += new System.EventHandler(this.departmentFilter_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -333,6 +334,7 @@
             this.removeFilterEmployees.TabIndex = 36;
             this.removeFilterEmployees.Text = "Remove Filter";
             this.removeFilterEmployees.UseVisualStyleBackColor = true;
+            this.removeFilterEmployees.Click += new System.EventHandler(this.removeFilterEmployees_Click);
             // 
             // printEmployees
             // 

@@ -43,10 +43,8 @@
             this.dateShift = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.removeFilterShifts = new System.Windows.Forms.Button();
-            this.filterShifts = new System.Windows.Forms.Button();
             this.shiftFilter = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.dateFilter = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +61,10 @@
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
             this.sortShifts = new System.Windows.Forms.ComboBox();
+            this.filterShifts = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.idFilter = new System.Windows.Forms.TextBox();
+            this.dateFilter = new System.Windows.Forms.DateTimePicker();
             idShifts = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.shiftsTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet1BindingSource)).BeginInit();
@@ -179,70 +181,41 @@
             // removeFilterShifts
             // 
             this.removeFilterShifts.AutoSize = true;
-            this.removeFilterShifts.Location = new System.Drawing.Point(93, 686);
+            this.removeFilterShifts.Location = new System.Drawing.Point(93, 759);
             this.removeFilterShifts.Name = "removeFilterShifts";
             this.removeFilterShifts.Size = new System.Drawing.Size(117, 30);
             this.removeFilterShifts.TabIndex = 72;
             this.removeFilterShifts.Text = "Remove Filter";
             this.removeFilterShifts.UseVisualStyleBackColor = true;
-            // 
-            // filterShifts
-            // 
-            this.filterShifts.AutoSize = true;
-            this.filterShifts.Location = new System.Drawing.Point(12, 686);
-            this.filterShifts.Name = "filterShifts";
-            this.filterShifts.Size = new System.Drawing.Size(75, 30);
-            this.filterShifts.TabIndex = 71;
-            this.filterShifts.Text = "Filter";
-            this.filterShifts.UseVisualStyleBackColor = true;
+            this.removeFilterShifts.Click += new System.EventHandler(this.removeFilterShifts_Click);
             // 
             // shiftFilter
             // 
             this.shiftFilter.FormattingEnabled = true;
             this.shiftFilter.Items.AddRange(new object[] {
-            "Patrol Division",
-            "Investigations Division",
-            "Special Operations",
-            "Highway Patrol",
-            "Community Services",
-            "Crime Scene Units",
-            "Administrative Division",
-            "Internal Affairs"});
-            this.shiftFilter.Location = new System.Drawing.Point(16, 543);
+            "Night Shift ",
+            "Morning Shift ",
+            "Daytime Shift ",
+            "Evening Shift"});
+            this.shiftFilter.Location = new System.Drawing.Point(16, 616);
             this.shiftFilter.Name = "shiftFilter";
             this.shiftFilter.Size = new System.Drawing.Size(164, 28);
             this.shiftFilter.TabIndex = 70;
+            this.shiftFilter.SelectedIndexChanged += new System.EventHandler(this.shiftFilter_SelectedIndexChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 510);
+            this.label8.Location = new System.Drawing.Point(12, 583);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(101, 20);
             this.label8.TabIndex = 69;
             this.label8.Text = "Filter by Shift";
             // 
-            // dateFilter
-            // 
-            this.dateFilter.FormattingEnabled = true;
-            this.dateFilter.Items.AddRange(new object[] {
-            "Patrol Division",
-            "Investigations Division",
-            "Special Operations",
-            "Highway Patrol",
-            "Community Services",
-            "Crime Scene Units",
-            "Administrative Division",
-            "Internal Affairs"});
-            this.dateFilter.Location = new System.Drawing.Point(16, 629);
-            this.dateFilter.Name = "dateFilter";
-            this.dateFilter.Size = new System.Drawing.Size(164, 28);
-            this.dateFilter.TabIndex = 74;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 596);
+            this.label4.Location = new System.Drawing.Point(12, 669);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 20);
             this.label4.TabIndex = 73;
@@ -381,17 +354,54 @@
             this.sortShifts.TabIndex = 80;
             this.sortShifts.SelectedIndexChanged += new System.EventHandler(this.sortShifts_SelectedIndexChanged);
             // 
+            // filterShifts
+            // 
+            this.filterShifts.AutoSize = true;
+            this.filterShifts.Location = new System.Drawing.Point(12, 759);
+            this.filterShifts.Name = "filterShifts";
+            this.filterShifts.Size = new System.Drawing.Size(75, 30);
+            this.filterShifts.TabIndex = 71;
+            this.filterShifts.Text = "Filter";
+            this.filterShifts.UseVisualStyleBackColor = true;
+            this.filterShifts.Click += new System.EventHandler(this.filterShifts_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 499);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(85, 20);
+            this.label5.TabIndex = 81;
+            this.label5.Text = "Filter by ID";
+            // 
+            // idFilter
+            // 
+            this.idFilter.Location = new System.Drawing.Point(16, 538);
+            this.idFilter.Name = "idFilter";
+            this.idFilter.Size = new System.Drawing.Size(161, 26);
+            this.idFilter.TabIndex = 82;
+            // 
+            // dateFilter
+            // 
+            this.dateFilter.Location = new System.Drawing.Point(16, 710);
+            this.dateFilter.Name = "dateFilter";
+            this.dateFilter.Size = new System.Drawing.Size(200, 26);
+            this.dateFilter.TabIndex = 83;
+            this.dateFilter.ValueChanged += new System.EventHandler(this.dateFilter_ValueChanged);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1078, 804);
+            this.Controls.Add(this.dateFilter);
+            this.Controls.Add(this.idFilter);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.sortShifts);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.printShifts);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.dateFilter);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.removeFilterShifts);
             this.Controls.Add(this.filterShifts);
@@ -431,10 +441,8 @@
         private System.Windows.Forms.DateTimePicker dateShift;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button removeFilterShifts;
-        private System.Windows.Forms.Button filterShifts;
         private System.Windows.Forms.ComboBox shiftFilter;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox dateFilter;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button printShifts;
@@ -454,5 +462,9 @@
         private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox sortShifts;
+        private System.Windows.Forms.Button filterShifts;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox idFilter;
+        private System.Windows.Forms.DateTimePicker dateFilter;
     }
 }

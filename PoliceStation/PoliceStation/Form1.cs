@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PoliceStation
 {
@@ -25,6 +26,7 @@ namespace PoliceStation
 
         }
 
+        // ADD, SAVE, DELETE:
         private void addEmployee_Click(object sender, EventArgs e)
         {
             employeesTableBindingSource.AddNew();
@@ -42,6 +44,7 @@ namespace PoliceStation
             employeesTableTableAdapter.Update(policeStationDataSet.EmployeesTable);
         }
 
+        // PRINT:
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             Bitmap imagebmp = new Bitmap(dataGridView1.Width, dataGridView1.Height);
@@ -56,12 +59,7 @@ namespace PoliceStation
             printPreviewDialog1.ShowDialog();
         }
 
-        private void filterEmployee_Click(object sender, EventArgs e)
-        {
-            //(dataGridView1.DataSource as DataTable).DefaultView.RowFilter =
-                //String.Format("ID like '%" + idFilter + "%'");
-        }
-
+        // STRIP MENU - TO DO:
         private void ChangeContent(Form newForm)
         {
             if (currentContentForm == newForm)
@@ -106,10 +104,54 @@ namespace PoliceStation
             //ChangeContent(new Form4());
         }
 
+        // SORT:
         private void sortEmployees_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataView dv = policeStationDataSet.EmployeesTable.DefaultView;
             dv.Sort = sortEmployees.SelectedItem.ToString();
+            dataGridView1.DataSource = dv.ToTable();
+        }
+
+        // FILTER:
+        private void departmentFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataView dv = policeStationDataSet.EmployeesTable.DefaultView;
+            string selectedValue = departmentFilter.SelectedItem?.ToString(); 
+
+            if (!string.IsNullOrEmpty(selectedValue))
+            {
+                dv.RowFilter = $"Department = '{selectedValue}'"; 
+            }
+            else
+            {
+                dv.RowFilter = string.Empty;
+            }
+
+            dataGridView1.DataSource = dv.ToTable();
+        }
+
+        private void filterEmployee_Click(object sender, EventArgs e)
+        {
+            DataView dv = policeStationDataSet.EmployeesTable.DefaultView;
+            string filterText = idFilter.Text.Trim();
+
+            if (!string.IsNullOrEmpty(filterText))
+            {
+                dv.RowFilter = $"Convert(ID, 'System.String') = '{filterText}'";
+            }
+            else
+            {
+                dv.RowFilter = string.Empty;
+            }
+
+            dataGridView1.DataSource = dv.ToTable();
+        }
+
+        private void removeFilterEmployees_Click(object sender, EventArgs e)
+        {
+            DataView dv = policeStationDataSet.EmployeesTable.DefaultView;
+            dv.RowFilter = string.Empty;
+
             dataGridView1.DataSource = dv.ToTable();
         }
     }
