@@ -135,14 +135,16 @@ namespace PoliceStation
 
         private void dateFilter_ValueChanged(object sender, EventArgs e)
         {
-            /*DataView dv = policeStationDataSet1.ShiftsTable.DefaultView;
+            DataView dv = policeStationDataSet1.ShiftsTable.DefaultView;
             DateTime selectedDate = dateFilter.Value.Date;
 
-            string formattedDate = selectedDate.ToString("yyyy-MM-dd");
+            string formattedDate = selectedDate.ToString("M/d/yyyy");
 
-            dv.RowFilter = $"Convert(Date, 'System.String') = '{formattedDate}'";
+            System.Diagnostics.Debug.WriteLine(formattedDate);
 
-            dataGridView1.DataSource = dv.ToTable();*/
+            dv.RowFilter = $"Date = #{formattedDate}#";
+
+            dataGridView1.DataSource = dv.ToTable();
         }
     }
 }
