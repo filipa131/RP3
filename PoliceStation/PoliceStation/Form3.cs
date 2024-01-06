@@ -32,14 +32,28 @@ namespace PoliceStation
 
         private void saveShift_Click(object sender, EventArgs e)
         {
-            casesTableBindingSource.EndEdit();
-            casesTableTableAdapter.Update(policeStationDataSet2.CasesTable);
+            try
+            {
+                casesTableBindingSource.EndEdit();
+                casesTableTableAdapter.Update(policeStationDataSet2.CasesTable);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void deleteShift_Click(object sender, EventArgs e)
         {
-            casesTableBindingSource.RemoveCurrent();
-            casesTableTableAdapter.Update(policeStationDataSet2.CasesTable);
+            try
+            {
+                casesTableBindingSource.RemoveCurrent();
+                casesTableTableAdapter.Update(policeStationDataSet2.CasesTable);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // PRINT:

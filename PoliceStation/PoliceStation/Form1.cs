@@ -34,14 +34,28 @@ namespace PoliceStation
 
         private void saveEmployee_Click(object sender, EventArgs e)
         {
-            employeesTableBindingSource.EndEdit();
-            employeesTableTableAdapter.Update(policeStationDataSet.EmployeesTable);
+            try
+            {
+                employeesTableBindingSource.EndEdit();
+                employeesTableTableAdapter.Update(policeStationDataSet.EmployeesTable);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void deleteEmployee_Click(object sender, EventArgs e)
         {
-            employeesTableBindingSource.RemoveCurrent();
-            employeesTableTableAdapter.Update(policeStationDataSet.EmployeesTable);
+            try
+            {
+                employeesTableBindingSource.RemoveCurrent();
+                employeesTableTableAdapter.Update(policeStationDataSet.EmployeesTable);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // PRINT:

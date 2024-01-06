@@ -33,14 +33,28 @@ namespace PoliceStation
 
         private void saveInventory_Click(object sender, EventArgs e)
         {
-            inventoryTableBindingSource.EndEdit();
-            inventoryTableTableAdapter.Update(policeStationDataSet.InventoryTable);
+            try
+            {
+                inventoryTableBindingSource.EndEdit();
+                inventoryTableTableAdapter.Update(policeStationDataSet.InventoryTable);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void deleteInventory_Click(object sender, EventArgs e)
         {
-            inventoryTableBindingSource.RemoveCurrent();
-            inventoryTableTableAdapter.Update(policeStationDataSet.InventoryTable);
+            try
+            {
+                inventoryTableBindingSource.RemoveCurrent();
+                inventoryTableTableAdapter.Update(policeStationDataSet.InventoryTable);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // PRINT:
