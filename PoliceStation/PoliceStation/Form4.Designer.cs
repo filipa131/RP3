@@ -58,26 +58,21 @@
             this.printInventory = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.employeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.shiftsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.casesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
             this.sortInventory = new System.Windows.Forms.ComboBox();
             policeInventory = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // policeInventory
             // 
             policeInventory.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryTableBindingSource, "Police Inventory", true));
-            policeInventory.Location = new System.Drawing.Point(23, 123);
+            policeInventory.Location = new System.Drawing.Point(20, 98);
+            policeInventory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             policeInventory.Name = "policeInventory";
-            policeInventory.Size = new System.Drawing.Size(164, 26);
+            policeInventory.Size = new System.Drawing.Size(146, 22);
             policeInventory.TabIndex = 44;
             // 
             // inventoryTableBindingSource
@@ -93,9 +88,10 @@
             // filterInventory
             // 
             this.filterInventory.AutoSize = true;
-            this.filterInventory.Location = new System.Drawing.Point(26, 811);
+            this.filterInventory.Location = new System.Drawing.Point(23, 649);
+            this.filterInventory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.filterInventory.Name = "filterInventory";
-            this.filterInventory.Size = new System.Drawing.Size(75, 30);
+            this.filterInventory.Size = new System.Drawing.Size(67, 26);
             this.filterInventory.TabIndex = 54;
             this.filterInventory.Text = "Filter";
             this.filterInventory.UseVisualStyleBackColor = true;
@@ -103,17 +99,20 @@
             // 
             // sNoFilter
             // 
-            this.sNoFilter.Location = new System.Drawing.Point(37, 675);
+            this.sNoFilter.Location = new System.Drawing.Point(33, 540);
+            this.sNoFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sNoFilter.Name = "sNoFilter";
-            this.sNoFilter.Size = new System.Drawing.Size(164, 26);
+            this.sNoFilter.Size = new System.Drawing.Size(146, 22);
             this.sNoFilter.TabIndex = 53;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(34, 638);
+            this.label7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Yellow;
+            this.label7.Location = new System.Drawing.Point(30, 510);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 20);
+            this.label7.Size = new System.Drawing.Size(108, 18);
             this.label7.TabIndex = 52;
             this.label7.Text = "Filter by S No";
             // 
@@ -130,27 +129,31 @@
             "Training Equipment",
             "Medical Supplies",
             "Miscellaneous"});
-            this.inventoryTypeFilter.Location = new System.Drawing.Point(34, 760);
+            this.inventoryTypeFilter.Location = new System.Drawing.Point(30, 608);
+            this.inventoryTypeFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.inventoryTypeFilter.Name = "inventoryTypeFilter";
-            this.inventoryTypeFilter.Size = new System.Drawing.Size(164, 28);
+            this.inventoryTypeFilter.Size = new System.Drawing.Size(146, 24);
             this.inventoryTypeFilter.TabIndex = 51;
             this.inventoryTypeFilter.SelectedIndexChanged += new System.EventHandler(this.inventoryTypeFilter_SelectedIndexChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(30, 727);
+            this.label8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Yellow;
+            this.label8.Location = new System.Drawing.Point(27, 582);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(171, 20);
+            this.label8.Size = new System.Drawing.Size(184, 18);
             this.label8.TabIndex = 50;
             this.label8.Text = "Filter by Inventory Type";
             // 
             // saveInventory
             // 
             this.saveInventory.AutoSize = true;
-            this.saveInventory.Location = new System.Drawing.Point(124, 447);
+            this.saveInventory.Location = new System.Drawing.Point(110, 358);
+            this.saveInventory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saveInventory.Name = "saveInventory";
-            this.saveInventory.Size = new System.Drawing.Size(75, 30);
+            this.saveInventory.Size = new System.Drawing.Size(67, 26);
             this.saveInventory.TabIndex = 49;
             this.saveInventory.Text = "Save";
             this.saveInventory.UseVisualStyleBackColor = true;
@@ -159,9 +162,10 @@
             // addInventory
             // 
             this.addInventory.AutoSize = true;
-            this.addInventory.Location = new System.Drawing.Point(22, 447);
+            this.addInventory.Location = new System.Drawing.Point(20, 358);
+            this.addInventory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addInventory.Name = "addInventory";
-            this.addInventory.Size = new System.Drawing.Size(75, 30);
+            this.addInventory.Size = new System.Drawing.Size(67, 26);
             this.addInventory.TabIndex = 48;
             this.addInventory.Text = "Add";
             this.addInventory.UseVisualStyleBackColor = true;
@@ -170,26 +174,30 @@
             // sNoAdd
             // 
             this.sNoAdd.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryTableBindingSource, "S No", true));
-            this.sNoAdd.Location = new System.Drawing.Point(29, 212);
+            this.sNoAdd.Location = new System.Drawing.Point(26, 170);
+            this.sNoAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sNoAdd.Name = "sNoAdd";
-            this.sNoAdd.Size = new System.Drawing.Size(164, 26);
+            this.sNoAdd.Size = new System.Drawing.Size(146, 22);
             this.sNoAdd.TabIndex = 47;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 175);
+            this.label5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Yellow;
+            this.label5.Location = new System.Drawing.Point(23, 140);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 20);
+            this.label5.Size = new System.Drawing.Size(44, 18);
             this.label5.TabIndex = 46;
             this.label5.Text = "S No";
             // 
             // quantityAdd
             // 
             this.quantityAdd.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.inventoryTableBindingSource, "Quantity", true));
-            this.quantityAdd.Location = new System.Drawing.Point(23, 394);
+            this.quantityAdd.Location = new System.Drawing.Point(20, 315);
+            this.quantityAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.quantityAdd.Name = "quantityAdd";
-            this.quantityAdd.Size = new System.Drawing.Size(164, 26);
+            this.quantityAdd.Size = new System.Drawing.Size(146, 22);
             this.quantityAdd.TabIndex = 45;
             // 
             // departmentAdd
@@ -206,44 +214,52 @@
             "Training Equipment",
             "Medical Supplies",
             "Miscellaneous"});
-            this.departmentAdd.Location = new System.Drawing.Point(26, 297);
+            this.departmentAdd.Location = new System.Drawing.Point(23, 238);
+            this.departmentAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.departmentAdd.Name = "departmentAdd";
-            this.departmentAdd.Size = new System.Drawing.Size(164, 28);
+            this.departmentAdd.Size = new System.Drawing.Size(146, 24);
             this.departmentAdd.TabIndex = 43;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 358);
+            this.label4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Yellow;
+            this.label4.Location = new System.Drawing.Point(20, 286);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 20);
+            this.label4.Size = new System.Drawing.Size(71, 18);
             this.label4.TabIndex = 42;
             this.label4.Text = "Quantity";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 264);
+            this.label2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Yellow;
+            this.label2.Location = new System.Drawing.Point(20, 211);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 20);
+            this.label2.Size = new System.Drawing.Size(120, 18);
             this.label2.TabIndex = 41;
             this.label2.Text = "Inventory Type";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 86);
+            this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Location = new System.Drawing.Point(20, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 20);
+            this.label1.Size = new System.Drawing.Size(127, 18);
             this.label1.TabIndex = 40;
             this.label1.Text = "Police Inventory";
             // 
             // deleteInventory
             // 
             this.deleteInventory.AutoSize = true;
-            this.deleteInventory.Location = new System.Drawing.Point(67, 500);
+            this.deleteInventory.Location = new System.Drawing.Point(60, 400);
+            this.deleteInventory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteInventory.Name = "deleteInventory";
-            this.deleteInventory.Size = new System.Drawing.Size(75, 30);
+            this.deleteInventory.Size = new System.Drawing.Size(67, 26);
             this.deleteInventory.TabIndex = 55;
             this.deleteInventory.Text = "Delete";
             this.deleteInventory.UseVisualStyleBackColor = true;
@@ -254,6 +270,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sNoDataGridViewTextBoxColumn,
@@ -261,11 +278,12 @@
             this.inventoryTypeDataGridViewTextBoxColumn,
             this.quantityDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.inventoryTableBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(249, 123);
+            this.dataGridView1.Location = new System.Drawing.Point(274, 98);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(851, 674);
+            this.dataGridView1.Size = new System.Drawing.Size(756, 539);
             this.dataGridView1.TabIndex = 56;
             // 
             // sNoDataGridViewTextBoxColumn
@@ -303,9 +321,10 @@
             // removeFilterInventory
             // 
             this.removeFilterInventory.AutoSize = true;
-            this.removeFilterInventory.Location = new System.Drawing.Point(107, 811);
+            this.removeFilterInventory.Location = new System.Drawing.Point(95, 649);
+            this.removeFilterInventory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.removeFilterInventory.Name = "removeFilterInventory";
-            this.removeFilterInventory.Size = new System.Drawing.Size(117, 30);
+            this.removeFilterInventory.Size = new System.Drawing.Size(104, 26);
             this.removeFilterInventory.TabIndex = 57;
             this.removeFilterInventory.Text = "Remove Filter";
             this.removeFilterInventory.UseVisualStyleBackColor = true;
@@ -314,9 +333,10 @@
             // printInventory
             // 
             this.printInventory.AutoSize = true;
-            this.printInventory.Location = new System.Drawing.Point(1025, 821);
+            this.printInventory.Location = new System.Drawing.Point(963, 663);
+            this.printInventory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.printInventory.Name = "printInventory";
-            this.printInventory.Size = new System.Drawing.Size(75, 30);
+            this.printInventory.Size = new System.Drawing.Size(67, 26);
             this.printInventory.TabIndex = 58;
             this.printInventory.Text = "Print";
             this.printInventory.UseVisualStyleBackColor = true;
@@ -336,55 +356,14 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.employeesToolStripMenuItem,
-            this.shiftsToolStripMenuItem,
-            this.casesToolStripMenuItem,
-            this.inventoryToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1138, 33);
-            this.menuStrip1.TabIndex = 61;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // employeesToolStripMenuItem
-            // 
-            this.employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
-            this.employeesToolStripMenuItem.Size = new System.Drawing.Size(114, 29);
-            this.employeesToolStripMenuItem.Text = "Employees";
-            this.employeesToolStripMenuItem.Click += new System.EventHandler(this.employeesToolStripMenuItem_Click);
-            // 
-            // shiftsToolStripMenuItem
-            // 
-            this.shiftsToolStripMenuItem.Name = "shiftsToolStripMenuItem";
-            this.shiftsToolStripMenuItem.Size = new System.Drawing.Size(72, 29);
-            this.shiftsToolStripMenuItem.Text = "Shifts";
-            this.shiftsToolStripMenuItem.Click += new System.EventHandler(this.shiftsToolStripMenuItem_Click);
-            // 
-            // casesToolStripMenuItem
-            // 
-            this.casesToolStripMenuItem.Name = "casesToolStripMenuItem";
-            this.casesToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
-            this.casesToolStripMenuItem.Text = "Cases";
-            this.casesToolStripMenuItem.Click += new System.EventHandler(this.casesToolStripMenuItem_Click);
-            // 
-            // inventoryToolStripMenuItem
-            // 
-            this.inventoryToolStripMenuItem.Name = "inventoryToolStripMenuItem";
-            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(103, 29);
-            this.inventoryToolStripMenuItem.Text = "Inventory";
-            this.inventoryToolStripMenuItem.Click += new System.EventHandler(this.inventoryToolStripMenuItem_Click);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(249, 86);
+            this.label6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Yellow;
+            this.label6.Location = new System.Drawing.Point(271, 68);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 20);
+            this.label6.Size = new System.Drawing.Size(40, 18);
             this.label6.TabIndex = 64;
             this.label6.Text = "Sort";
             // 
@@ -396,20 +375,21 @@
             "S No",
             "Inventory Type",
             "Quantity"});
-            this.sortInventory.Location = new System.Drawing.Point(307, 83);
+            this.sortInventory.Location = new System.Drawing.Point(336, 67);
+            this.sortInventory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sortInventory.Name = "sortInventory";
-            this.sortInventory.Size = new System.Drawing.Size(121, 28);
+            this.sortInventory.Size = new System.Drawing.Size(108, 24);
             this.sortInventory.TabIndex = 63;
             this.sortInventory.SelectedIndexChanged += new System.EventHandler(this.sortInventory_SelectedIndexChanged);
             // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1138, 875);
+            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ClientSize = new System.Drawing.Size(1073, 700);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.sortInventory);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.printInventory);
             this.Controls.Add(this.removeFilterInventory);
             this.Controls.Add(this.dataGridView1);
@@ -429,14 +409,13 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form4";
             this.Text = "Inventory";
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.inventoryTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -471,11 +450,6 @@
         private System.Windows.Forms.Button printInventory;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem employeesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem shiftsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem casesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox sortInventory;
     }

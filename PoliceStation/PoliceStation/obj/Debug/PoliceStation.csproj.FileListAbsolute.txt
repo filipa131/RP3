@@ -24,3 +24,4 @@ C:\Users\gorup\OneDrive - student.math.hr\Desktop\RP3\projekt\RP3\PoliceStation\
 C:\Users\gorup\OneDrive - student.math.hr\Desktop\RP3\projekt\RP3\PoliceStation\PoliceStation\obj\Debug\PoliceStation.csproj.CoreCompileInputs.cache
 C:\Users\gorup\OneDrive - student.math.hr\Desktop\RP3\projekt\RP3\PoliceStation\PoliceStation\obj\Debug\PoliceStation.exe
 C:\Users\gorup\OneDrive - student.math.hr\Desktop\RP3\projekt\RP3\PoliceStation\PoliceStation\obj\Debug\PoliceStation.pdb
+C:\Users\gorup\OneDrive - student.math.hr\Desktop\RP3\projekt\RP3\PoliceStation\PoliceStation\obj\Debug\PoliceStation.MainForm.resources
