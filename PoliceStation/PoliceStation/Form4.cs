@@ -72,31 +72,6 @@ namespace PoliceStation
             printPreviewDialog1.ShowDialog();
         }
 
-        // STRIP MENU - TO DO:
-        private void employeesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form1 f1 = new Form1();
-            f1.ShowDialog(); 
-        }
-
-        private void shiftsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form2 f2 = new Form2();
-            f2.ShowDialog();
-        }
-
-        private void casesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form3 f3 = new Form3();
-            f3.ShowDialog();
-        }
-
-        private void inventoryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form4 f4 = new Form4();
-            f4.ShowDialog();
-        }
-
         // SORT:
         private void sortInventory_SelectedIndexChanged(object sender, EventArgs e)
         {
