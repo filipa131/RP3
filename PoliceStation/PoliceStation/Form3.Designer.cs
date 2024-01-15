@@ -62,6 +62,11 @@
             this.casesTableTableAdapter = new PoliceStation.PoliceStationDataSet2TableAdapters.CasesTableTableAdapter();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.employeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shiftsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.casesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sortCases = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.noFilter = new System.Windows.Forms.TextBox();
@@ -70,15 +75,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.casesTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // No
             // 
             No.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casesTableBindingSource, "No", true));
-            No.Location = new System.Drawing.Point(17, 118);
-            No.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            No.Location = new System.Drawing.Point(19, 95);
             No.Name = "No";
-            No.Size = new System.Drawing.Size(146, 22);
+            No.Size = new System.Drawing.Size(164, 26);
             No.TabIndex = 72;
             // 
             // casesTableBindingSource
@@ -94,40 +99,35 @@
             // description
             // 
             description.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casesTableBindingSource, "Description", true));
-            description.Location = new System.Drawing.Point(22, 328);
-            description.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            description.Location = new System.Drawing.Point(25, 358);
             description.Multiline = true;
             description.Name = "description";
-            description.Size = new System.Drawing.Size(146, 22);
+            description.Size = new System.Drawing.Size(164, 26);
             description.TabIndex = 81;
             // 
             // dateShift
             // 
             this.dateShift.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casesTableBindingSource, "Date of Modification", true));
-            this.dateShift.Location = new System.Drawing.Point(25, 407);
-            this.dateShift.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateShift.Location = new System.Drawing.Point(28, 456);
             this.dateShift.Name = "dateShift";
-            this.dateShift.Size = new System.Drawing.Size(178, 22);
+            this.dateShift.Size = new System.Drawing.Size(200, 26);
             this.dateShift.TabIndex = 77;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Yellow;
-            this.label3.Location = new System.Drawing.Point(21, 379);
+            this.label3.Location = new System.Drawing.Point(24, 421);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(156, 18);
+            this.label3.Size = new System.Drawing.Size(151, 20);
             this.label3.TabIndex = 76;
             this.label3.Text = "Date of Modification";
             // 
             // deleteShift
             // 
             this.deleteShift.AutoSize = true;
-            this.deleteShift.Location = new System.Drawing.Point(65, 506);
-            this.deleteShift.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.deleteShift.Location = new System.Drawing.Point(73, 580);
             this.deleteShift.Name = "deleteShift";
-            this.deleteShift.Size = new System.Drawing.Size(67, 26);
+            this.deleteShift.Size = new System.Drawing.Size(75, 30);
             this.deleteShift.TabIndex = 75;
             this.deleteShift.Text = "Delete";
             this.deleteShift.UseVisualStyleBackColor = true;
@@ -136,10 +136,9 @@
             // saveShift
             // 
             this.saveShift.AutoSize = true;
-            this.saveShift.Location = new System.Drawing.Point(116, 464);
-            this.saveShift.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.saveShift.Location = new System.Drawing.Point(130, 527);
             this.saveShift.Name = "saveShift";
-            this.saveShift.Size = new System.Drawing.Size(67, 26);
+            this.saveShift.Size = new System.Drawing.Size(75, 30);
             this.saveShift.TabIndex = 74;
             this.saveShift.Text = "Save";
             this.saveShift.UseVisualStyleBackColor = true;
@@ -148,10 +147,9 @@
             // addShift
             // 
             this.addShift.AutoSize = true;
-            this.addShift.Location = new System.Drawing.Point(25, 464);
-            this.addShift.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addShift.Location = new System.Drawing.Point(28, 527);
             this.addShift.Name = "addShift";
-            this.addShift.Size = new System.Drawing.Size(67, 26);
+            this.addShift.Size = new System.Drawing.Size(75, 30);
             this.addShift.TabIndex = 73;
             this.addShift.Text = "Add";
             this.addShift.UseVisualStyleBackColor = true;
@@ -171,31 +169,26 @@
             "Cyber Crimes",
             "Missing Persons",
             "Public Order Offenses"});
-            this.typeOfCase.Location = new System.Drawing.Point(20, 185);
-            this.typeOfCase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.typeOfCase.Location = new System.Drawing.Point(22, 179);
             this.typeOfCase.Name = "typeOfCase";
-            this.typeOfCase.Size = new System.Drawing.Size(146, 24);
+            this.typeOfCase.Size = new System.Drawing.Size(164, 28);
             this.typeOfCase.TabIndex = 71;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(16, 159);
+            this.label2.Location = new System.Drawing.Point(18, 146);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 18);
+            this.label2.Size = new System.Drawing.Size(102, 20);
             this.label2.TabIndex = 70;
             this.label2.Text = "Type of Case";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(16, 88);
+            this.label1.Location = new System.Drawing.Point(18, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 18);
+            this.label1.Size = new System.Drawing.Size(29, 20);
             this.label1.TabIndex = 69;
             this.label1.Text = "No";
             // 
@@ -213,31 +206,26 @@
             "Pending Prosecution",
             "Awaiting Trial",
             "Solved"});
-            this.status.Location = new System.Drawing.Point(22, 253);
-            this.status.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.status.Location = new System.Drawing.Point(25, 264);
             this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(146, 24);
+            this.status.Size = new System.Drawing.Size(164, 28);
             this.status.TabIndex = 79;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Yellow;
-            this.label4.Location = new System.Drawing.Point(19, 227);
+            this.label4.Location = new System.Drawing.Point(21, 231);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 18);
+            this.label4.Size = new System.Drawing.Size(56, 20);
             this.label4.TabIndex = 78;
             this.label4.Text = "Status";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Yellow;
-            this.label5.Location = new System.Drawing.Point(21, 299);
+            this.label5.Location = new System.Drawing.Point(24, 321);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 18);
+            this.label5.Size = new System.Drawing.Size(89, 20);
             this.label5.TabIndex = 80;
             this.label5.Text = "Description";
             // 
@@ -254,21 +242,18 @@
             "Pending Prosecution",
             "Awaiting Trial",
             "Solved"});
-            this.statusFilter.Location = new System.Drawing.Point(28, 716);
-            this.statusFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.statusFilter.Location = new System.Drawing.Point(31, 843);
             this.statusFilter.Name = "statusFilter";
-            this.statusFilter.Size = new System.Drawing.Size(146, 24);
+            this.statusFilter.Size = new System.Drawing.Size(164, 28);
             this.statusFilter.TabIndex = 87;
             this.statusFilter.SelectedIndexChanged += new System.EventHandler(this.statusFilter_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Yellow;
-            this.label6.Location = new System.Drawing.Point(24, 690);
+            this.label6.Location = new System.Drawing.Point(27, 810);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 18);
+            this.label6.Size = new System.Drawing.Size(115, 20);
             this.label6.TabIndex = 86;
             this.label6.Text = "Filter by Status";
             // 
@@ -285,42 +270,36 @@
             "Cyber Crimes",
             "Missing Persons",
             "Public Order Offenses"});
-            this.typeOfCaseFilter.Location = new System.Drawing.Point(25, 648);
-            this.typeOfCaseFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.typeOfCaseFilter.Location = new System.Drawing.Point(28, 758);
             this.typeOfCaseFilter.Name = "typeOfCaseFilter";
-            this.typeOfCaseFilter.Size = new System.Drawing.Size(146, 24);
+            this.typeOfCaseFilter.Size = new System.Drawing.Size(164, 28);
             this.typeOfCaseFilter.TabIndex = 84;
             this.typeOfCaseFilter.SelectedIndexChanged += new System.EventHandler(this.typeOfCaseFilter_SelectedIndexChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Yellow;
-            this.label7.Location = new System.Drawing.Point(21, 622);
+            this.label7.Location = new System.Drawing.Point(24, 725);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(169, 18);
+            this.label7.Size = new System.Drawing.Size(161, 20);
             this.label7.TabIndex = 83;
             this.label7.Text = "Filter by Type of Case";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Yellow;
-            this.label8.Location = new System.Drawing.Point(21, 552);
+            this.label8.Location = new System.Drawing.Point(24, 637);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 18);
+            this.label8.Size = new System.Drawing.Size(88, 20);
             this.label8.TabIndex = 82;
             this.label8.Text = "Filter by No";
             // 
             // printCases
             // 
             this.printCases.AutoSize = true;
-            this.printCases.Location = new System.Drawing.Point(1020, 706);
-            this.printCases.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.printCases.Location = new System.Drawing.Point(1147, 830);
             this.printCases.Name = "printCases";
-            this.printCases.Size = new System.Drawing.Size(67, 26);
+            this.printCases.Size = new System.Drawing.Size(75, 30);
             this.printCases.TabIndex = 88;
             this.printCases.Text = "Print";
             this.printCases.UseVisualStyleBackColor = true;
@@ -329,10 +308,9 @@
             // removeFilterCases
             // 
             this.removeFilterCases.AutoSize = true;
-            this.removeFilterCases.Location = new System.Drawing.Point(300, 715);
-            this.removeFilterCases.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.removeFilterCases.Location = new System.Drawing.Point(337, 841);
             this.removeFilterCases.Name = "removeFilterCases";
-            this.removeFilterCases.Size = new System.Drawing.Size(104, 26);
+            this.removeFilterCases.Size = new System.Drawing.Size(117, 30);
             this.removeFilterCases.TabIndex = 91;
             this.removeFilterCases.Text = "Remove Filter";
             this.removeFilterCases.UseVisualStyleBackColor = true;
@@ -341,10 +319,9 @@
             // filterCases
             // 
             this.filterCases.AutoSize = true;
-            this.filterCases.Location = new System.Drawing.Point(228, 715);
-            this.filterCases.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.filterCases.Location = new System.Drawing.Point(256, 841);
             this.filterCases.Name = "filterCases";
-            this.filterCases.Size = new System.Drawing.Size(67, 26);
+            this.filterCases.Size = new System.Drawing.Size(75, 30);
             this.filterCases.TabIndex = 90;
             this.filterCases.Text = "Filter";
             this.filterCases.UseVisualStyleBackColor = true;
@@ -355,7 +332,6 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.noDataGridViewTextBoxColumn,
@@ -364,12 +340,11 @@
             this.descriptionDataGridViewTextBoxColumn,
             this.dateOfModificationDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.casesTableBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(264, 118);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(297, 95);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(822, 568);
+            this.dataGridView1.Size = new System.Drawing.Size(925, 710);
             this.dataGridView1.TabIndex = 92;
             // 
             // noDataGridViewTextBoxColumn
@@ -425,6 +400,49 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.employeesToolStripMenuItem,
+            this.shiftsToolStripMenuItem,
+            this.casesToolStripMenuItem,
+            this.inventoryToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1253, 33);
+            this.menuStrip1.TabIndex = 93;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // employeesToolStripMenuItem
+            // 
+            this.employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
+            this.employeesToolStripMenuItem.Size = new System.Drawing.Size(114, 29);
+            this.employeesToolStripMenuItem.Text = "Employees";
+            this.employeesToolStripMenuItem.Click += new System.EventHandler(this.employeesToolStripMenuItem_Click_1);
+            // 
+            // shiftsToolStripMenuItem
+            // 
+            this.shiftsToolStripMenuItem.Name = "shiftsToolStripMenuItem";
+            this.shiftsToolStripMenuItem.Size = new System.Drawing.Size(72, 29);
+            this.shiftsToolStripMenuItem.Text = "Shifts";
+            this.shiftsToolStripMenuItem.Click += new System.EventHandler(this.shiftsToolStripMenuItem_Click_1);
+            // 
+            // casesToolStripMenuItem
+            // 
+            this.casesToolStripMenuItem.Name = "casesToolStripMenuItem";
+            this.casesToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
+            this.casesToolStripMenuItem.Text = "Cases";
+            this.casesToolStripMenuItem.Click += new System.EventHandler(this.casesToolStripMenuItem_Click_1);
+            // 
+            // inventoryToolStripMenuItem
+            // 
+            this.inventoryToolStripMenuItem.Name = "inventoryToolStripMenuItem";
+            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(103, 29);
+            this.inventoryToolStripMenuItem.Text = "Inventory";
+            this.inventoryToolStripMenuItem.Click += new System.EventHandler(this.inventoryToolStripMenuItem_Click_1);
+            // 
             // sortCases
             // 
             this.sortCases.FormattingEnabled = true;
@@ -433,41 +451,37 @@
             "Type of Case",
             "Status",
             "Date of Modification"});
-            this.sortCases.Location = new System.Drawing.Point(309, 86);
-            this.sortCases.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sortCases.Location = new System.Drawing.Point(348, 55);
             this.sortCases.Name = "sortCases";
-            this.sortCases.Size = new System.Drawing.Size(108, 24);
+            this.sortCases.Size = new System.Drawing.Size(121, 28);
             this.sortCases.TabIndex = 95;
             this.sortCases.SelectedIndexChanged += new System.EventHandler(this.sortCases_SelectedIndexChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Yellow;
-            this.label9.Location = new System.Drawing.Point(260, 88);
+            this.label9.Location = new System.Drawing.Point(293, 58);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 18);
+            this.label9.Size = new System.Drawing.Size(39, 20);
             this.label9.TabIndex = 94;
             this.label9.Text = "Sort";
             // 
             // noFilter
             // 
-            this.noFilter.Location = new System.Drawing.Point(28, 581);
-            this.noFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.noFilter.Location = new System.Drawing.Point(31, 674);
             this.noFilter.Name = "noFilter";
-            this.noFilter.Size = new System.Drawing.Size(146, 22);
+            this.noFilter.Size = new System.Drawing.Size(164, 26);
             this.noFilter.TabIndex = 96;
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RoyalBlue;
-            this.ClientSize = new System.Drawing.Size(1115, 749);
+            this.ClientSize = new System.Drawing.Size(1253, 884);
             this.Controls.Add(this.noFilter);
             this.Controls.Add(this.sortCases);
             this.Controls.Add(this.label9);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.removeFilterCases);
             this.Controls.Add(this.filterCases);
@@ -490,13 +504,14 @@
             this.Controls.Add(this.typeOfCase);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form3";
             this.Text = "Cases";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.casesTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -534,6 +549,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dateOfModificationDataGridViewTextBoxColumn;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem employeesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem shiftsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem casesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem;
         private System.Windows.Forms.ComboBox sortCases;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox noFilter;

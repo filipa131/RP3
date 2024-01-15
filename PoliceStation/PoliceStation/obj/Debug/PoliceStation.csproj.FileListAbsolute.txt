@@ -11,17 +11,3 @@ C:\Users\Lenovo\Desktop\PoliceStation\PoliceStation\obj\Debug\PoliceStation.pdb
 C:\Users\Lenovo\Desktop\PoliceStation\PoliceStation\obj\Debug\PoliceStation.Form4.resources
 C:\Users\Lenovo\Desktop\PoliceStation\PoliceStation\obj\Debug\PoliceStation.Form2.resources
 C:\Users\Lenovo\Desktop\PoliceStation\PoliceStation\obj\Debug\PoliceStation.Form3.resources
-C:\Users\gorup\OneDrive - student.math.hr\Desktop\RP3\projekt\RP3\PoliceStation\PoliceStation\bin\Debug\PoliceStation.exe.config
-C:\Users\gorup\OneDrive - student.math.hr\Desktop\RP3\projekt\RP3\PoliceStation\PoliceStation\bin\Debug\PoliceStation.exe
-C:\Users\gorup\OneDrive - student.math.hr\Desktop\RP3\projekt\RP3\PoliceStation\PoliceStation\bin\Debug\PoliceStation.pdb
-C:\Users\gorup\OneDrive - student.math.hr\Desktop\RP3\projekt\RP3\PoliceStation\PoliceStation\obj\Debug\PoliceStation.csproj.AssemblyReference.cache
-C:\Users\gorup\OneDrive - student.math.hr\Desktop\RP3\projekt\RP3\PoliceStation\PoliceStation\obj\Debug\PoliceStation.Form1.resources
-C:\Users\gorup\OneDrive - student.math.hr\Desktop\RP3\projekt\RP3\PoliceStation\PoliceStation\obj\Debug\PoliceStation.Form2.resources
-C:\Users\gorup\OneDrive - student.math.hr\Desktop\RP3\projekt\RP3\PoliceStation\PoliceStation\obj\Debug\PoliceStation.Form3.resources
-C:\Users\gorup\OneDrive - student.math.hr\Desktop\RP3\projekt\RP3\PoliceStation\PoliceStation\obj\Debug\PoliceStation.Form4.resources
-C:\Users\gorup\OneDrive - student.math.hr\Desktop\RP3\projekt\RP3\PoliceStation\PoliceStation\obj\Debug\PoliceStation.Properties.Resources.resources
-C:\Users\gorup\OneDrive - student.math.hr\Desktop\RP3\projekt\RP3\PoliceStation\PoliceStation\obj\Debug\PoliceStation.csproj.GenerateResource.cache
-C:\Users\gorup\OneDrive - student.math.hr\Desktop\RP3\projekt\RP3\PoliceStation\PoliceStation\obj\Debug\PoliceStation.csproj.CoreCompileInputs.cache
-C:\Users\gorup\OneDrive - student.math.hr\Desktop\RP3\projekt\RP3\PoliceStation\PoliceStation\obj\Debug\PoliceStation.exe
-C:\Users\gorup\OneDrive - student.math.hr\Desktop\RP3\projekt\RP3\PoliceStation\PoliceStation\obj\Debug\PoliceStation.pdb
-C:\Users\gorup\OneDrive - student.math.hr\Desktop\RP3\projekt\RP3\PoliceStation\PoliceStation\obj\Debug\PoliceStation.MainForm.resources

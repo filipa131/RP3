@@ -21,41 +21,29 @@ namespace PoliceStation
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'policeStationDataSet3.EmployeesTable' table. You can move, or remove it, as needed.
+            this.employeesTableTableAdapter1.Fill(this.policeStationDataSet3.EmployeesTable);
             // TODO: This line of code loads data into the 'policeStationDataSet.EmployeesTable' table. You can move, or remove it, as needed.
-            this.employeesTableTableAdapter.Fill(this.policeStationDataSet.EmployeesTable);
+            //this.employeesTableTableAdapter.Fill(this.policeStationDataSet.EmployeesTable);
 
         }
 
         // ADD, SAVE, DELETE:
         private void addEmployee_Click(object sender, EventArgs e)
         {
-            employeesTableBindingSource.AddNew();
+            employeesTableBindingSource1.AddNew();
         }
 
         private void saveEmployee_Click(object sender, EventArgs e)
         {
-            try
-            {
-                employeesTableBindingSource.EndEdit();
-                employeesTableTableAdapter.Update(policeStationDataSet.EmployeesTable);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            employeesTableBindingSource1.EndEdit();
+            employeesTableTableAdapter1.Update(policeStationDataSet3.EmployeesTable);
         }
 
         private void deleteEmployee_Click(object sender, EventArgs e)
         {
-            try
-            {
-                employeesTableBindingSource.RemoveCurrent();
-                employeesTableTableAdapter.Update(policeStationDataSet.EmployeesTable);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            employeesTableBindingSource1.RemoveCurrent();
+            employeesTableTableAdapter1.Update(policeStationDataSet3.EmployeesTable);
         }
 
         // PRINT:
@@ -73,10 +61,55 @@ namespace PoliceStation
             printPreviewDialog1.ShowDialog();
         }
 
+        // STRIP MENU - TO DO:
+        private void ChangeContent(Form newForm)
+        {
+            if (currentContentForm == newForm)
+            {
+                currentContentForm.BringToFront();
+                return;
+            }
+
+            if (currentContentForm != null)
+            {
+                Controls.Remove(currentContentForm); 
+                currentContentForm.Dispose(); 
+            }
+
+            newForm.TopLevel = false;
+            newForm.FormBorderStyle = FormBorderStyle.None;
+            newForm.Dock = DockStyle.Fill;
+            Controls.Add(newForm); 
+            newForm.Show();
+
+            currentContentForm = newForm;
+        }
+
+
+        private void employeesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeContent(new Form1());
+        }
+
+        private void shiftsToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ChangeContent(new Form2());
+        }
+
+        private void casesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ChangeContent(new Form3());
+        }
+
+        private void inventoryToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ChangeContent(new Form4());
+        }
+
         // SORT:
         private void sortEmployees_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataView dv = policeStationDataSet.EmployeesTable.DefaultView;
+            DataView dv = policeStationDataSet3.EmployeesTable.DefaultView;
             dv.Sort = sortEmployees.SelectedItem.ToString();
             dataGridView1.DataSource = dv.ToTable();
         }
@@ -84,7 +117,7 @@ namespace PoliceStation
         // FILTER:
         private void departmentFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataView dv = policeStationDataSet.EmployeesTable.DefaultView;
+            DataView dv = policeStationDataSet3.EmployeesTable.DefaultView;
             string selectedValue = departmentFilter.SelectedItem?.ToString(); 
 
             if (!string.IsNullOrEmpty(selectedValue))
@@ -101,7 +134,7 @@ namespace PoliceStation
 
         private void filterEmployee_Click(object sender, EventArgs e)
         {
-            DataView dv = policeStationDataSet.EmployeesTable.DefaultView;
+            DataView dv = policeStationDataSet3.EmployeesTable.DefaultView;
             string filterText = idFilter.Text.Trim();
 
             if (!string.IsNullOrEmpty(filterText))
@@ -118,7 +151,7 @@ namespace PoliceStation
 
         private void removeFilterEmployees_Click(object sender, EventArgs e)
         {
-            DataView dv = policeStationDataSet.EmployeesTable.DefaultView;
+            DataView dv = policeStationDataSet3.EmployeesTable.DefaultView;
             dv.RowFilter = string.Empty;
 
             dataGridView1.DataSource = dv.ToTable();

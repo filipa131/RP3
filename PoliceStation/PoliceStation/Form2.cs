@@ -32,29 +32,14 @@ namespace PoliceStation
 
         private void saveShift_Click(object sender, EventArgs e)
         {
-            try
-            {
-                shiftsTableBindingSource.EndEdit();
-                shiftsTableTableAdapter.Update(policeStationDataSet1.ShiftsTable);
-                MessageBox.Show("Data saved successfully.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            shiftsTableBindingSource.EndEdit();
+            shiftsTableTableAdapter.Update(policeStationDataSet1.ShiftsTable);
         }
 
         private void deleteShift_Click(object sender, EventArgs e)
         {
-            try
-            {
-                shiftsTableBindingSource.RemoveCurrent();
-                shiftsTableTableAdapter.Update(policeStationDataSet1.ShiftsTable);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            shiftsTableBindingSource.RemoveCurrent();
+            shiftsTableTableAdapter.Update(policeStationDataSet1.ShiftsTable);
         }
 
         // PRINT:
@@ -70,6 +55,31 @@ namespace PoliceStation
             printPreviewDialog1.Document = printDocument1;
             printPreviewDialog1.PrintPreviewControl.Zoom = 1;
             printPreviewDialog1.ShowDialog();
+        }
+
+        // STRIP MENU - TO DO:
+        private void employeesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.ShowDialog();
+        }
+
+        private void shiftsToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.ShowDialog();
+        }
+
+        private void casesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            f3.ShowDialog();
+        }
+
+        private void inventoryToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Form4 f4 = new Form4();
+            f4.ShowDialog();
         }
 
         // SORT:
@@ -125,14 +135,14 @@ namespace PoliceStation
 
         private void dateFilter_ValueChanged(object sender, EventArgs e)
         {
-            DataView dv = policeStationDataSet1.ShiftsTable.DefaultView;
+            /*DataView dv = policeStationDataSet1.ShiftsTable.DefaultView;
             DateTime selectedDate = dateFilter.Value.Date;
 
-            string formattedDate = selectedDate.ToString("M/d/yyyy");
+            string formattedDate = selectedDate.ToString("yyyy-MM-dd");
 
-            dv.RowFilter = $"Date = #{formattedDate}#";
+            dv.RowFilter = $"Convert(Date, 'System.String') = '{formattedDate}'";
 
-            dataGridView1.DataSource = dv.ToTable();
+            dataGridView1.DataSource = dv.ToTable();*/
         }
     }
 }
