@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -70,12 +70,28 @@ namespace PoliceStation
             logOutToolStripMenuItem.Enabled = false;
 
             labelMsg.Text = "Enter employee ID and password to log in.";
+            labelName.Text = "";
             activeForm.Close();
         }
 
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
             // TODO: provjera podataka u bazi
+            using (SqlConnection conn = new SqlConnection())
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT password, writeAccess, firstName, lastName" +
+                    " FROM PoliceStaton.dbo.EmployeesTable WHERE id=@id", conn);
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("id", textBoxID.Text);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read() && reader["password"].ToString() == textBoxPassword.Text) 
+                {
+                    loggedIn = true;
+                    writeAccess = Convert.ToBoolean(reader["writeAccess"]);
+                    labelName.Text = reader["firstName"].ToString() + " " + reader["lastName"].ToString();
+                }
+            }
 
             if (loggedIn)
             {

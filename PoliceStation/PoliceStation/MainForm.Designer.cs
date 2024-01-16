@@ -41,6 +41,7 @@
             this.labelPassword = new System.Windows.Forms.Label();
             this.buttonLogIn = new System.Windows.Forms.Button();
             this.labelMsg = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -187,12 +188,25 @@
             this.labelMsg.Text = "Enter employee ID and password to log in.";
             this.labelMsg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // labelName
+            // 
+            this.labelName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelName.ForeColor = System.Drawing.Color.Yellow;
+            this.labelName.Location = new System.Drawing.Point(643, 9);
+            this.labelName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(0, 18);
+            this.labelName.TabIndex = 30;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(850, 636);
+            this.Controls.Add(this.labelName);
             this.Controls.Add(this.labelMsg);
             this.Controls.Add(this.buttonLogIn);
             this.Controls.Add(this.textBoxPassword);
@@ -226,5 +240,6 @@
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Button buttonLogIn;
         private System.Windows.Forms.Label labelMsg;
+        private System.Windows.Forms.Label labelName;
     }
 }
