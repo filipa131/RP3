@@ -12,9 +12,15 @@ namespace PoliceStation
 {
     public partial class Form3 : Form
     {
-        public Form3()
+        public Form3(bool writeAccess)
         {
             InitializeComponent();
+            typeOfCase.Enabled = writeAccess;
+            status.Enabled = writeAccess;
+            dateShift.Enabled = writeAccess;
+            addShift.Enabled = writeAccess;
+            saveShift.Enabled = writeAccess;
+            deleteShift.Enabled = writeAccess;
         }
 
         private void Form3_Load(object sender, EventArgs e)

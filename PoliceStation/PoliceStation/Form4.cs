@@ -13,9 +13,15 @@ namespace PoliceStation
 {
     public partial class Form4 : Form
     {
-        public Form4()
+        public Form4(bool writeAccess)
         {
             InitializeComponent();
+            sNoAdd.Enabled = writeAccess;
+            departmentAdd.Enabled = writeAccess;
+            quantityAdd.Enabled = writeAccess;
+            addInventory.Enabled = writeAccess;
+            saveInventory.Enabled = writeAccess;
+            deleteInventory.Enabled = writeAccess;
         }
 
         private void Form4_Load(object sender, EventArgs e)
