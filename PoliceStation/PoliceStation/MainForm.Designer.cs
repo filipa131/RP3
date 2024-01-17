@@ -48,6 +48,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Yellow;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.employeesToolStripMenuItem,
@@ -57,8 +58,8 @@
             this.logOutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(850, 36);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(1278, 49);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,14 +72,14 @@
             this.employeesToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employeesToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
-            this.employeesToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.employeesToolStripMenuItem.Size = new System.Drawing.Size(158, 33);
             this.employeesToolStripMenuItem.Text = "Employees";
             this.employeesToolStripMenuItem.Click += new System.EventHandler(this.employeesToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(57, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(87, 6);
             // 
             // shiftsToolStripMenuItem
             // 
@@ -87,7 +88,7 @@
             this.shiftsToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.shiftsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.shiftsToolStripMenuItem.Name = "shiftsToolStripMenuItem";
-            this.shiftsToolStripMenuItem.Size = new System.Drawing.Size(67, 22);
+            this.shiftsToolStripMenuItem.Size = new System.Drawing.Size(96, 33);
             this.shiftsToolStripMenuItem.Text = "Shifts";
             this.shiftsToolStripMenuItem.Click += new System.EventHandler(this.shiftsToolStripMenuItem_Click);
             // 
@@ -98,7 +99,7 @@
             this.casesToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.casesToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.casesToolStripMenuItem.Name = "casesToolStripMenuItem";
-            this.casesToolStripMenuItem.Size = new System.Drawing.Size(69, 22);
+            this.casesToolStripMenuItem.Size = new System.Drawing.Size(100, 33);
             this.casesToolStripMenuItem.Text = "Cases";
             this.casesToolStripMenuItem.Click += new System.EventHandler(this.casesToolStripMenuItem_Click);
             // 
@@ -109,7 +110,7 @@
             this.inventoryToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.inventoryToolStripMenuItem.Name = "inventoryToolStripMenuItem";
-            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(145, 33);
             this.inventoryToolStripMenuItem.Text = "Inventory";
             this.inventoryToolStripMenuItem.Click += new System.EventHandler(this.inventoryToolStripMenuItem_Click);
             // 
@@ -120,7 +121,7 @@
             this.logOutToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOutToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(82, 22);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(119, 33);
             this.logOutToolStripMenuItem.Text = "Log out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
@@ -129,25 +130,26 @@
             this.labelID.AutoSize = true;
             this.labelID.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelID.ForeColor = System.Drawing.Color.Yellow;
-            this.labelID.Location = new System.Drawing.Point(187, 45);
-            this.labelID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelID.Location = new System.Drawing.Point(280, 75);
             this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(26, 14);
+            this.labelID.Size = new System.Drawing.Size(40, 22);
             this.labelID.TabIndex = 24;
             this.labelID.Text = "ID:";
             // 
             // textBoxID
             // 
-            this.textBoxID.Location = new System.Drawing.Point(218, 43);
+            this.textBoxID.Location = new System.Drawing.Point(327, 72);
+            this.textBoxID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(111, 20);
+            this.textBoxID.Size = new System.Drawing.Size(164, 26);
             this.textBoxID.TabIndex = 25;
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(436, 43);
+            this.textBoxPassword.Location = new System.Drawing.Point(654, 72);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(175, 20);
+            this.textBoxPassword.Size = new System.Drawing.Size(260, 26);
             this.textBoxPassword.TabIndex = 27;
             // 
             // labelPassword
@@ -155,10 +157,9 @@
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPassword.ForeColor = System.Drawing.Color.Yellow;
-            this.labelPassword.Location = new System.Drawing.Point(357, 45);
-            this.labelPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelPassword.Location = new System.Drawing.Point(536, 75);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(74, 14);
+            this.labelPassword.Size = new System.Drawing.Size(103, 22);
             this.labelPassword.TabIndex = 26;
             this.labelPassword.Text = "Password:";
             // 
@@ -167,9 +168,10 @@
             this.buttonLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonLogIn.ForeColor = System.Drawing.Color.Yellow;
-            this.buttonLogIn.Location = new System.Drawing.Point(646, 41);
+            this.buttonLogIn.Location = new System.Drawing.Point(969, 63);
+            this.buttonLogIn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonLogIn.Name = "buttonLogIn";
-            this.buttonLogIn.Size = new System.Drawing.Size(75, 23);
+            this.buttonLogIn.Size = new System.Drawing.Size(112, 35);
             this.buttonLogIn.TabIndex = 28;
             this.buttonLogIn.Text = "Log in";
             this.buttonLogIn.UseVisualStyleBackColor = true;
@@ -180,10 +182,9 @@
             this.labelMsg.AutoSize = true;
             this.labelMsg.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelMsg.ForeColor = System.Drawing.Color.Yellow;
-            this.labelMsg.Location = new System.Drawing.Point(229, 87);
-            this.labelMsg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelMsg.Location = new System.Drawing.Point(343, 125);
             this.labelMsg.Name = "labelMsg";
-            this.labelMsg.Size = new System.Drawing.Size(361, 18);
+            this.labelMsg.Size = new System.Drawing.Size(525, 29);
             this.labelMsg.TabIndex = 29;
             this.labelMsg.Text = "Enter employee ID and password to log in.";
             this.labelMsg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -194,18 +195,17 @@
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelName.ForeColor = System.Drawing.Color.Yellow;
-            this.labelName.Location = new System.Drawing.Point(643, 9);
-            this.labelName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelName.Location = new System.Drawing.Point(967, 14);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(0, 18);
+            this.labelName.Size = new System.Drawing.Size(0, 29);
             this.labelName.TabIndex = 30;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
-            this.ClientSize = new System.Drawing.Size(850, 636);
+            this.ClientSize = new System.Drawing.Size(1278, 1044);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.labelMsg);
             this.Controls.Add(this.buttonLogIn);
@@ -215,9 +215,9 @@
             this.Controls.Add(this.labelID);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "Police Station";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
