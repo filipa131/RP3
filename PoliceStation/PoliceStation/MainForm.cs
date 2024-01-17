@@ -74,24 +74,23 @@ namespace PoliceStation
             activeForm.Close();
         }
 
+        string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=PoliceStation;Integrated Security=True";
+
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
-            // TODO: provjera podataka u bazi
-            string connString = "Data Source=.\\SQLEXPRESS;Initial Catalog=PoliceStation;" +
-                "Integrated Security=True";
-            using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("SELECT password, writeAccess, firstName, " +
-                    "lastName FROM PoliceStaton.dbo.EmployeesTable WHERE id=@id", conn);
+                SqlCommand cmd = new SqlCommand("SELECT Password, [Write Access], Name" +
+                    " FROM [PoliceStation].[dbo].[EmployeesTable] WHERE ID=@ID", conn);
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("id", textBoxID.Text);
+                cmd.Parameters.AddWithValue("ID", textBoxID.Text);
                 SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read() && reader["password"].ToString() == textBoxPassword.Text) 
+                if (reader.Read() && reader["Password"].ToString() == textBoxPassword.Text) 
                 {
                     loggedIn = true;
-                    writeAccess = Convert.ToBoolean(reader["writeAccess"]);
-                    labelName.Text = reader["firstName"].ToString() + " " + reader["lastName"].ToString();
+                    writeAccess = Convert.ToBoolean(reader["Write Access"]);
+                    labelName.Text = reader["Name"].ToString();
                 }
             }
 
@@ -112,6 +111,11 @@ namespace PoliceStation
             {
                 labelMsg.Text = "Incorrect employee ID or password. Please try again!";
             }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
