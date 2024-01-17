@@ -35,17 +35,7 @@ VALUES
     (7, 'Daytime Shift', '2024-01-08'),
     (8, 'Evening Shift', '2024-02-13'),
     (9, 'Night Shift', '2024-01-20'),
-    (10, 'Morning Shift', '2024-02-05'),
-    (11, 'Daytime Shift', '2024-01-10'),
-    (12, 'Evening Shift', '2024-02-15'),
-    (13, 'Night Shift', '2024-01-18'),
-    (14, 'Morning Shift', '2024-02-03'),
-    (15, 'Daytime Shift', '2024-01-13'),
-    (16, 'Evening Shift', '2024-02-08'),
-    (17, 'Night Shift', '2024-01-23'),
-    (18, 'Morning Shift', '2024-02-06'),
-    (19, 'Daytime Shift', '2024-01-11'),
-    (20, 'Evening Shift', '2024-02-16');
+    (10, 'Morning Shift', '2024-02-05');
 
 INSERT INTO [dbo].[InventoryTable] ([S No], [Police Inventory], [Inventory Type], [Quantity])
 VALUES
