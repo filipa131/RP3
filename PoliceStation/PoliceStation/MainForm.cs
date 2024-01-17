@@ -77,11 +77,13 @@ namespace PoliceStation
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
             // TODO: provjera podataka u bazi
-            using (SqlConnection conn = new SqlConnection())
+            string connString = "Data Source=.\\SQLEXPRESS;Initial Catalog=PoliceStation;" +
+                "Integrated Security=True";
+            using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("SELECT password, writeAccess, firstName, lastName" +
-                    " FROM PoliceStaton.dbo.EmployeesTable WHERE id=@id", conn);
+                SqlCommand cmd = new SqlCommand("SELECT password, writeAccess, firstName, " +
+                    "lastName FROM PoliceStaton.dbo.EmployeesTable WHERE id=@id", conn);
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("id", textBoxID.Text);
                 SqlDataReader reader = cmd.ExecuteReader();
