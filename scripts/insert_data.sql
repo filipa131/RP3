@@ -1,15 +1,15 @@
 INSERT INTO [dbo].[EmployeesTable] ([ID], [Name], [Department], [Date of Birth], [Hourly Rate])
 VALUES
-    (1, 'John Doe', 'Patrol Division', '1985-04-15', 20.50),
-    (2, 'Jane Smith', 'Investigations Division', '1978-09-22', 25.75),
-    (3, 'Mike Johnson', 'Special Operations', '1965-07-08', 15.00),
-    (4, 'Emily Davis', 'Highway Patrol', '1990-03-14', 22.25),
-    (5, 'Robert White', 'Community Services', '1973-11-30', 18.50),
-    (6, 'Jessica Brown', 'Crime Scene Units', '1980-02-17', 30.00),
-    (7, 'David Wilson', 'Administrative Division', '1968-08-03', 12.75),
-    (8, 'Ashley Turner', 'Internal Affairs', '1982-04-26', 28.00),
-    (9, 'Brian Miller', 'Patrol Division', '1977-01-10', 17.50),
-    (10, 'Megan Harris', 'Special Operations', '1989-09-18', 23.50);
+    (1, 'John Doe', 'Patrol Division', '1985-04-15', 20.50, 0, 11),
+    (2, 'Jane Smith', 'Investigations Division', '1978-09-22', 25.75, 1, 22),
+    (3, 'Mike Johnson', 'Special Operations', '1965-07-08', 15.00, 1, 33),
+    (4, 'Emily Davis', 'Highway Patrol', '1990-03-14', 22.25, 1, 44),
+    (5, 'Robert White', 'Community Services', '1973-11-30', 18.50, 1, 55),
+    (6, 'Jessica Brown', 'Crime Scene Units', '1980-02-17', 30.00, 1, 66),
+    (7, 'David Wilson', 'Administrative Division', '1968-08-03', 12.75, 1, 77),
+    (8, 'Ashley Turner', 'Internal Affairs', '1982-04-26', 28.00, 1, 88),
+    (9, 'Brian Miller', 'Patrol Division', '1977-01-10', 17.50, 1, 99),
+    (10, 'Megan Harris', 'Special Operations', '1989-09-18', 23.50, 1, 1010);
 
 INSERT INTO [dbo].[CasesTable] ([No], [Type of Case], [Status], [Description], [Date of Modification])
 VALUES
