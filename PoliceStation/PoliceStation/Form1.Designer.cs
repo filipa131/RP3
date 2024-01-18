@@ -375,7 +375,7 @@
             // writeAccessCheckBox
             // 
             this.writeAccessCheckBox.AutoSize = true;
-            this.writeAccessCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.employeesTableBindingSource1, "Write Access", true));
+            this.writeAccessCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.employeesTableBindingSource1, "Write Access", true));
             this.writeAccessCheckBox.ForeColor = System.Drawing.Color.Yellow;
             this.writeAccessCheckBox.Location = new System.Drawing.Point(30, 546);
             this.writeAccessCheckBox.Name = "writeAccessCheckBox";
