@@ -33,6 +33,8 @@
             this.saveEmployee = new System.Windows.Forms.Button();
             this.addEmployee = new System.Windows.Forms.Button();
             this.idAdd = new System.Windows.Forms.TextBox();
+            this.employeesTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.policeStationDataSet3 = new PoliceStation.PoliceStationDataSet3();
             this.employeesTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.policeStationDataSet = new PoliceStation.PoliceStationDataSet();
             this.label5 = new System.Windows.Forms.Label();
@@ -61,21 +63,17 @@
             this.password = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.policeStationDataSet3 = new PoliceStation.PoliceStationDataSet3();
-            this.employeesTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.employeesTableTableAdapter1 = new PoliceStation.PoliceStationDataSet3TableAdapters.EmployeesTableTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateOfBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hourlyRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.writeAccessDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesTableBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesTableBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // saveEmployee
@@ -110,6 +108,16 @@
             this.idAdd.Name = "idAdd";
             this.idAdd.Size = new System.Drawing.Size(164, 26);
             this.idAdd.TabIndex = 24;
+            // 
+            // employeesTableBindingSource1
+            // 
+            this.employeesTableBindingSource1.DataMember = "EmployeesTable";
+            this.employeesTableBindingSource1.DataSource = this.policeStationDataSet3;
+            // 
+            // policeStationDataSet3
+            // 
+            this.policeStationDataSet3.DataSetName = "PoliceStationDataSet3";
+            this.policeStationDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // employeesTableBindingSource
             // 
@@ -407,9 +415,7 @@
             this.nameDataGridViewTextBoxColumn,
             this.departmentDataGridViewTextBoxColumn,
             this.dateOfBirthDataGridViewTextBoxColumn,
-            this.hourlyRateDataGridViewTextBoxColumn,
-            this.writeAccessDataGridViewCheckBoxColumn,
-            this.passwordDataGridViewTextBoxColumn});
+            this.hourlyRateDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.employeesTableBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(280, 280);
             this.dataGridView1.Name = "dataGridView1";
@@ -418,16 +424,6 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(986, 700);
             this.dataGridView1.TabIndex = 70;
-            // 
-            // policeStationDataSet3
-            // 
-            this.policeStationDataSet3.DataSetName = "PoliceStationDataSet3";
-            this.policeStationDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeesTableBindingSource1
-            // 
-            this.employeesTableBindingSource1.DataMember = "EmployeesTable";
-            this.employeesTableBindingSource1.DataSource = this.policeStationDataSet3;
             // 
             // employeesTableTableAdapter1
             // 
@@ -478,24 +474,6 @@
             this.hourlyRateDataGridViewTextBoxColumn.ReadOnly = true;
             this.hourlyRateDataGridViewTextBoxColumn.Width = 150;
             // 
-            // writeAccessDataGridViewCheckBoxColumn
-            // 
-            this.writeAccessDataGridViewCheckBoxColumn.DataPropertyName = "Write Access";
-            this.writeAccessDataGridViewCheckBoxColumn.HeaderText = "Write Access";
-            this.writeAccessDataGridViewCheckBoxColumn.MinimumWidth = 8;
-            this.writeAccessDataGridViewCheckBoxColumn.Name = "writeAccessDataGridViewCheckBoxColumn";
-            this.writeAccessDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.writeAccessDataGridViewCheckBoxColumn.Width = 150;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
-            this.passwordDataGridViewTextBoxColumn.Width = 150;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -533,11 +511,11 @@
             this.Name = "Form1";
             this.Text = "Employees";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.employeesTableBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesTableBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -584,8 +562,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn departmentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateOfBirthDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hourlyRateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn writeAccessDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
     }
 }
 
