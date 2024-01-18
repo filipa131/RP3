@@ -73,6 +73,10 @@ namespace PoliceStation
                     shiftsTableTableAdapter.Update(policeStationDataSet1.ShiftsTable);
                     MessageBox.Show("Data saved successfully.");
                 }
+                else
+                {
+                    MessageBox.Show("Employee with this ID does not exist.");
+                }
             }
             catch (Exception ex)
             {
