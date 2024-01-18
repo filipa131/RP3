@@ -102,15 +102,20 @@ namespace PoliceStation
         // PRINT:
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
+            Font titleFont = new Font("Arial", 16, FontStyle.Bold);
+            string title = "Shifts";
+            e.Graphics.DrawString(title, titleFont, Brushes.Black, new PointF(50, 30));
+
             Bitmap imagebmp = new Bitmap(dataGridView1.Width, dataGridView1.Height);
             dataGridView1.DrawToBitmap(imagebmp, new Rectangle(0, 0, dataGridView1.Width, dataGridView1.Height));
-            e.Graphics.DrawImage(imagebmp, 120, 20);
+            e.Graphics.DrawImage(imagebmp, 50, 80);
         }
 
         private void printShifts_Click(object sender, EventArgs e)
         {
             printPreviewDialog1.Document = printDocument1;
             printPreviewDialog1.PrintPreviewControl.Zoom = 1;
+            printPreviewDialog1.Text = "Shifts";
             printPreviewDialog1.ShowDialog();
         }
 
