@@ -1,4 +1,4 @@
-INSERT INTO [dbo].[EmployeesTable] ([ID], [Name], [Department], [Date of Birth], [Hourly Rate])
+INSERT INTO [dbo].[EmployeesTable] ([ID], [Name], [Department], [Date of Birth], [Hourly Rate], [Write Access], [Password])
 VALUES
     (1, 'John Doe', 'Patrol Division', '1985-04-15', 20.50, 0, 11),
     (2, 'Jane Smith', 'Investigations Division', '1978-09-22', 25.75, 1, 22),
