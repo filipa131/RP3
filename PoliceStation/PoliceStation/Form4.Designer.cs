@@ -49,10 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.deleteInventory = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.policeInventoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inventoryTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inventoryTableTableAdapter = new PoliceStation.PoliceStationDataSetTableAdapters.InventoryTableTableAdapter();
             this.removeFilterInventory = new System.Windows.Forms.Button();
             this.printInventory = new System.Windows.Forms.Button();
@@ -60,6 +56,10 @@
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.label6 = new System.Windows.Forms.Label();
             this.sortInventory = new System.Windows.Forms.ComboBox();
+            this.sNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.policeInventoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inventoryTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             policeInventory = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).BeginInit();
@@ -288,38 +288,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(985, 700);
             this.dataGridView1.TabIndex = 56;
             // 
-            // sNoDataGridViewTextBoxColumn
-            // 
-            this.sNoDataGridViewTextBoxColumn.DataPropertyName = "S No";
-            this.sNoDataGridViewTextBoxColumn.HeaderText = "S No";
-            this.sNoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.sNoDataGridViewTextBoxColumn.Name = "sNoDataGridViewTextBoxColumn";
-            this.sNoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // policeInventoryDataGridViewTextBoxColumn
-            // 
-            this.policeInventoryDataGridViewTextBoxColumn.DataPropertyName = "Police Inventory";
-            this.policeInventoryDataGridViewTextBoxColumn.HeaderText = "Police Inventory";
-            this.policeInventoryDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.policeInventoryDataGridViewTextBoxColumn.Name = "policeInventoryDataGridViewTextBoxColumn";
-            this.policeInventoryDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // inventoryTypeDataGridViewTextBoxColumn
-            // 
-            this.inventoryTypeDataGridViewTextBoxColumn.DataPropertyName = "Inventory Type";
-            this.inventoryTypeDataGridViewTextBoxColumn.HeaderText = "Inventory Type";
-            this.inventoryTypeDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.inventoryTypeDataGridViewTextBoxColumn.Name = "inventoryTypeDataGridViewTextBoxColumn";
-            this.inventoryTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // inventoryTableTableAdapter
             // 
             this.inventoryTableTableAdapter.ClearBeforeFill = true;
@@ -388,6 +356,42 @@
             this.sortInventory.TabIndex = 63;
             this.sortInventory.SelectedIndexChanged += new System.EventHandler(this.sortInventory_SelectedIndexChanged);
             // 
+            // sNoDataGridViewTextBoxColumn
+            // 
+            this.sNoDataGridViewTextBoxColumn.DataPropertyName = "S No";
+            this.sNoDataGridViewTextBoxColumn.HeaderText = "S No";
+            this.sNoDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.sNoDataGridViewTextBoxColumn.Name = "sNoDataGridViewTextBoxColumn";
+            this.sNoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sNoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // policeInventoryDataGridViewTextBoxColumn
+            // 
+            this.policeInventoryDataGridViewTextBoxColumn.DataPropertyName = "Police Inventory";
+            this.policeInventoryDataGridViewTextBoxColumn.HeaderText = "Police Inventory";
+            this.policeInventoryDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.policeInventoryDataGridViewTextBoxColumn.Name = "policeInventoryDataGridViewTextBoxColumn";
+            this.policeInventoryDataGridViewTextBoxColumn.ReadOnly = true;
+            this.policeInventoryDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // inventoryTypeDataGridViewTextBoxColumn
+            // 
+            this.inventoryTypeDataGridViewTextBoxColumn.DataPropertyName = "Inventory Type";
+            this.inventoryTypeDataGridViewTextBoxColumn.HeaderText = "Inventory Type";
+            this.inventoryTypeDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.inventoryTypeDataGridViewTextBoxColumn.Name = "inventoryTypeDataGridViewTextBoxColumn";
+            this.inventoryTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.inventoryTypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quantityDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -448,15 +452,15 @@
         private PoliceStationDataSet policeStationDataSet;
         private System.Windows.Forms.BindingSource inventoryTableBindingSource;
         private PoliceStationDataSetTableAdapters.InventoryTableTableAdapter inventoryTableTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sNoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn policeInventoryDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn inventoryTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button removeFilterInventory;
         private System.Windows.Forms.Button printInventory;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox sortInventory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sNoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn policeInventoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inventoryTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
     }
 }

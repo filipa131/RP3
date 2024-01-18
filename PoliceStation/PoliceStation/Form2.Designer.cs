@@ -47,9 +47,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shiftDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.printShifts = new System.Windows.Forms.Button();
             this.shiftsTableTableAdapter = new PoliceStation.PoliceStationDataSet1TableAdapters.ShiftsTableTableAdapter();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
@@ -60,6 +57,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.idFilter = new System.Windows.Forms.TextBox();
             this.dateFilter = new System.Windows.Forms.DateTimePicker();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shiftDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            idShifts = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.shiftsTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet1)).BeginInit();
@@ -259,30 +260,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(657, 455);
             this.dataGridView1.TabIndex = 75;
             // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // shiftDataGridViewTextBoxColumn
-            // 
-            this.shiftDataGridViewTextBoxColumn.DataPropertyName = "Shift";
-            this.shiftDataGridViewTextBoxColumn.HeaderText = "Shift";
-            this.shiftDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.shiftDataGridViewTextBoxColumn.Name = "shiftDataGridViewTextBoxColumn";
-            this.shiftDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // printShifts
             // 
             this.printShifts.AutoSize = true;
@@ -380,6 +357,33 @@
             this.dateFilter.TabIndex = 83;
             this.dateFilter.ValueChanged += new System.EventHandler(this.dateFilter_ValueChanged);
             // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // shiftDataGridViewTextBoxColumn
+            // 
+            this.shiftDataGridViewTextBoxColumn.DataPropertyName = "Shift";
+            this.shiftDataGridViewTextBoxColumn.HeaderText = "Shift";
+            this.shiftDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.shiftDataGridViewTextBoxColumn.Name = "shiftDataGridViewTextBoxColumn";
+            this.shiftDataGridViewTextBoxColumn.ReadOnly = true;
+            this.shiftDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -440,9 +444,6 @@
         private PoliceStationDataSet1 policeStationDataSet1;
         private System.Windows.Forms.BindingSource shiftsTableBindingSource;
         private PoliceStationDataSet1TableAdapters.ShiftsTableTableAdapter shiftsTableTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shiftDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.Label label6;
@@ -452,5 +453,8 @@
         private System.Windows.Forms.TextBox idFilter;
         private System.Windows.Forms.DateTimePicker dateFilter;
         private System.Windows.Forms.TextBox idShifts;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shiftDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
     }
 }
