@@ -29,22 +29,24 @@ namespace PoliceStation
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'policeStationDataSet3.EmployeesTable' table. You can move, or remove it, as needed.
+            this.employeesTableTableAdapter1.Fill(this.policeStationDataSet3.EmployeesTable);
             // TODO: This line of code loads data into the 'policeStationDataSet.EmployeesTable' table. You can move, or remove it, as needed.
-            this.employeesTableTableAdapter.Fill(this.policeStationDataSet.EmployeesTable);
+            //this.employeesTableTableAdapter.Fill(this.policeStationDataSet.EmployeesTable);
         }
 
         // ADD, SAVE, DELETE:
         private void addEmployee_Click(object sender, EventArgs e)
         {
-            employeesTableBindingSource.AddNew();
+            employeesTableBindingSource1.AddNew();
         }
 
         private void saveEmployee_Click(object sender, EventArgs e)
         {
             try
             {
-                employeesTableBindingSource.EndEdit();
-                employeesTableTableAdapter.Update(policeStationDataSet.EmployeesTable);
+                employeesTableBindingSource1.EndEdit();
+                employeesTableTableAdapter1.Update(policeStationDataSet3.EmployeesTable);
             }
             catch (Exception ex)
             {
@@ -56,8 +58,8 @@ namespace PoliceStation
         {
             try
             {
-                employeesTableBindingSource.RemoveCurrent();
-                employeesTableTableAdapter.Update(policeStationDataSet.EmployeesTable);
+                employeesTableBindingSource1.RemoveCurrent();
+                employeesTableTableAdapter1.Update(policeStationDataSet3.EmployeesTable);
             }
             catch (Exception ex)
             {
