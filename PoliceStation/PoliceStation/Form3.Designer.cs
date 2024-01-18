@@ -32,8 +32,6 @@
             System.Windows.Forms.TextBox No;
             System.Windows.Forms.TextBox description;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
-            this.casesTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.policeStationDataSet2 = new PoliceStation.PoliceStationDataSet2();
             this.dateShift = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.deleteShift = new System.Windows.Forms.Button();
@@ -53,13 +51,15 @@
             this.printCases = new System.Windows.Forms.Button();
             this.removeFilterCases = new System.Windows.Forms.Button();
             this.filterCases = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.casesTableTableAdapter = new PoliceStation.PoliceStationDataSet2TableAdapters.CasesTableTableAdapter();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.sortCases = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.noFilter = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.policeStationDataSet = new PoliceStation.PoliceStationDataSet();
+            this.casesTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.casesTableTableAdapter = new PoliceStation.PoliceStationDataSetTableAdapters.CasesTableTableAdapter();
             this.noDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeOfCaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,9 +67,9 @@
             this.dateOfModificationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             No = new System.Windows.Forms.TextBox();
             description = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.casesTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.casesTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // No
@@ -80,16 +80,6 @@
             No.Name = "No";
             No.Size = new System.Drawing.Size(164, 26);
             No.TabIndex = 72;
-            // 
-            // casesTableBindingSource
-            // 
-            this.casesTableBindingSource.DataMember = "CasesTable";
-            this.casesTableBindingSource.DataSource = this.policeStationDataSet2;
-            // 
-            // policeStationDataSet2
-            // 
-            this.policeStationDataSet2.DataSetName = "PoliceStationDataSet2";
-            this.policeStationDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // description
             // 
@@ -350,34 +340,6 @@
             this.filterCases.UseVisualStyleBackColor = true;
             this.filterCases.Click += new System.EventHandler(this.filterCases_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.noDataGridViewTextBoxColumn,
-            this.typeOfCaseDataGridViewTextBoxColumn,
-            this.statusDataGridViewTextBoxColumn,
-            this.descriptionDataGridViewTextBoxColumn,
-            this.dateOfModificationDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.casesTableBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(280, 280);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(985, 700);
-            this.dataGridView1.TabIndex = 92;
-            // 
-            // casesTableTableAdapter
-            // 
-            this.casesTableTableAdapter.ClearBeforeFill = true;
-            // 
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
@@ -425,6 +387,42 @@
             this.noFilter.Name = "noFilter";
             this.noFilter.Size = new System.Drawing.Size(164, 26);
             this.noFilter.TabIndex = 96;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.noDataGridViewTextBoxColumn,
+            this.typeOfCaseDataGridViewTextBoxColumn,
+            this.statusDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.dateOfModificationDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.casesTableBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(280, 280);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(985, 700);
+            this.dataGridView1.TabIndex = 97;
+            // 
+            // policeStationDataSet
+            // 
+            this.policeStationDataSet.DataSetName = "PoliceStationDataSet";
+            this.policeStationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // casesTableBindingSource
+            // 
+            this.casesTableBindingSource.DataMember = "CasesTable";
+            this.casesTableBindingSource.DataSource = this.policeStationDataSet;
+            // 
+            // casesTableTableAdapter
+            // 
+            this.casesTableTableAdapter.ClearBeforeFill = true;
             // 
             // noDataGridViewTextBoxColumn
             // 
@@ -477,10 +475,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(1278, 1044);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.noFilter);
             this.Controls.Add(this.sortCases);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.removeFilterCases);
             this.Controls.Add(this.filterCases);
             this.Controls.Add(this.printCases);
@@ -506,9 +504,9 @@
             this.Name = "Form3";
             this.Text = "Cases";
             this.Load += new System.EventHandler(this.Form3_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.casesTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.casesTableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -535,15 +533,15 @@
         private System.Windows.Forms.Button printCases;
         private System.Windows.Forms.Button removeFilterCases;
         private System.Windows.Forms.Button filterCases;
-        private PoliceStationDataSet2 policeStationDataSet2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource casesTableBindingSource;
-        private PoliceStationDataSet2TableAdapters.CasesTableTableAdapter casesTableTableAdapter;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.ComboBox sortCases;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox noFilter;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private PoliceStationDataSet policeStationDataSet;
+        private System.Windows.Forms.BindingSource casesTableBindingSource;
+        private PoliceStationDataSetTableAdapters.CasesTableTableAdapter casesTableTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn noDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeOfCaseDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;

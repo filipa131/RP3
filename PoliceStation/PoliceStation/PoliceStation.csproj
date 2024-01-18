@@ -81,31 +81,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PoliceStationDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="PoliceStationDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PoliceStationDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="PoliceStationDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PoliceStationDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="PoliceStationDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PoliceStationDataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="PoliceStationDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PoliceStationDataSet4.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="PoliceStationDataSet5.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PoliceStationDataSet5.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -143,61 +118,6 @@
     </None>
     <None Include="PoliceStationDataSet.xss">
       <DependentUpon>PoliceStationDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="PoliceStationDataSet1.xsc">
-      <DependentUpon>PoliceStationDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="PoliceStationDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PoliceStationDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PoliceStationDataSet1.xss">
-      <DependentUpon>PoliceStationDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="PoliceStationDataSet2.xsc">
-      <DependentUpon>PoliceStationDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="PoliceStationDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PoliceStationDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PoliceStationDataSet2.xss">
-      <DependentUpon>PoliceStationDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="PoliceStationDataSet3.xsc">
-      <DependentUpon>PoliceStationDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="PoliceStationDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PoliceStationDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PoliceStationDataSet3.xss">
-      <DependentUpon>PoliceStationDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="PoliceStationDataSet4.xsc">
-      <DependentUpon>PoliceStationDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="PoliceStationDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PoliceStationDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PoliceStationDataSet4.xss">
-      <DependentUpon>PoliceStationDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="PoliceStationDataSet5.xsc">
-      <DependentUpon>PoliceStationDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="PoliceStationDataSet5.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PoliceStationDataSet5.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PoliceStationDataSet5.xss">
-      <DependentUpon>PoliceStationDataSet5.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

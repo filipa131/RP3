@@ -49,11 +49,8 @@ namespace PoliceStation
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'policeStationDataSet5.ShiftsTable' table. You can move, or remove it, as needed.
-            this.shiftsTableTableAdapter1.Fill(this.policeStationDataSet5.ShiftsTable);
-            // TODO: This line of code loads data into the 'policeStationDataSet1.ShiftsTable' table. You can move, or remove it, as needed.
-            //this.shiftsTableTableAdapter.Fill(this.policeStationDataSet1.ShiftsTable);
-
+            // TODO: This line of code loads data into the 'policeStationDataSet.ShiftsTable' table. You can move, or remove it, as needed.
+            this.shiftsTableTableAdapter.Fill(this.policeStationDataSet.ShiftsTable);
         }
 
         // ADD, SAVE, DELETE:
@@ -61,7 +58,7 @@ namespace PoliceStation
         {
             if (CheckEmployeeID(Convert.ToInt32(idShifts.Text)))
             {
-                shiftsTableBindingSource1.AddNew();
+                shiftsTableBindingSource.AddNew();
             }
         }
 
@@ -71,8 +68,8 @@ namespace PoliceStation
             {
                 if (CheckEmployeeID(Convert.ToInt32(idShifts.Text)))
                 {
-                    shiftsTableBindingSource1.EndEdit();
-                    shiftsTableTableAdapter1.Update(policeStationDataSet5.ShiftsTable);
+                    shiftsTableBindingSource.EndEdit();
+                    shiftsTableTableAdapter.Update(policeStationDataSet.ShiftsTable);
                     MessageBox.Show("Data saved successfully.");
                 }
                 else
@@ -82,7 +79,7 @@ namespace PoliceStation
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Person with this ID already has a shift on that date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -90,8 +87,8 @@ namespace PoliceStation
         {
             try
             {
-                shiftsTableBindingSource1.RemoveCurrent();
-                shiftsTableTableAdapter1.Update(policeStationDataSet5.ShiftsTable);
+                shiftsTableBindingSource.RemoveCurrent();
+                shiftsTableTableAdapter.Update(policeStationDataSet.ShiftsTable);
             }
             catch (Exception ex)
             {
@@ -122,7 +119,7 @@ namespace PoliceStation
         // SORT:
         private void sortShifts_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataView dv = policeStationDataSet5.ShiftsTable.DefaultView;
+            DataView dv = policeStationDataSet.ShiftsTable.DefaultView;
             dv.Sort = sortShifts.SelectedItem.ToString();
             dataGridView1.DataSource = dv.ToTable();
         }
@@ -130,7 +127,7 @@ namespace PoliceStation
         // FILTER - TO DO date filter:
         private void shiftFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataView dv = policeStationDataSet5.ShiftsTable.DefaultView;
+            DataView dv = policeStationDataSet.ShiftsTable.DefaultView;
             string selectedValue = shiftFilter.SelectedItem?.ToString();
 
             if (!string.IsNullOrEmpty(selectedValue))
@@ -147,7 +144,7 @@ namespace PoliceStation
 
         private void filterShifts_Click(object sender, EventArgs e)
         {
-            DataView dv = policeStationDataSet5.ShiftsTable.DefaultView;
+            DataView dv = policeStationDataSet.ShiftsTable.DefaultView;
             string filterText = idFilter.Text.Trim();
 
             if (!string.IsNullOrEmpty(filterText))
@@ -164,7 +161,7 @@ namespace PoliceStation
 
         private void removeFilterShifts_Click(object sender, EventArgs e)
         {
-            DataView dv = policeStationDataSet5.ShiftsTable.DefaultView;
+            DataView dv = policeStationDataSet.ShiftsTable.DefaultView;
             dv.RowFilter = string.Empty;
 
             dataGridView1.DataSource = dv.ToTable();
@@ -172,7 +169,7 @@ namespace PoliceStation
 
         private void dateFilter_ValueChanged(object sender, EventArgs e)
         {
-            DataView dv = policeStationDataSet5.ShiftsTable.DefaultView;
+            DataView dv = policeStationDataSet.ShiftsTable.DefaultView;
             DateTime selectedDate = dateFilter.Value.Date;
 
             string formattedDate = selectedDate.ToString("M/d/yyyy");

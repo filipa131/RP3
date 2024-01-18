@@ -28,7 +28,6 @@ namespace PoliceStation
         {
             // TODO: This line of code loads data into the 'policeStationDataSet.InventoryTable' table. You can move, or remove it, as needed.
             this.inventoryTableTableAdapter.Fill(this.policeStationDataSet.InventoryTable);
-
         }
 
         // ADD, SAVE, DELETE:

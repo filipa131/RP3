@@ -25,9 +25,8 @@ namespace PoliceStation
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'policeStationDataSet2.CasesTable' table. You can move, or remove it, as needed.
-            this.casesTableTableAdapter.Fill(this.policeStationDataSet2.CasesTable);
-
+            // TODO: This line of code loads data into the 'policeStationDataSet.CasesTable' table. You can move, or remove it, as needed.
+            this.casesTableTableAdapter.Fill(this.policeStationDataSet.CasesTable);
         }
 
         // ADD, SAVE, DELETE:
@@ -41,7 +40,7 @@ namespace PoliceStation
             try
             {
                 casesTableBindingSource.EndEdit();
-                casesTableTableAdapter.Update(policeStationDataSet2.CasesTable);
+                casesTableTableAdapter.Update(policeStationDataSet.CasesTable);
             }
             catch (Exception ex)
             {
@@ -54,7 +53,7 @@ namespace PoliceStation
             try
             {
                 casesTableBindingSource.RemoveCurrent();
-                casesTableTableAdapter.Update(policeStationDataSet2.CasesTable);
+                casesTableTableAdapter.Update(policeStationDataSet.CasesTable);
             }
             catch (Exception ex)
             {
@@ -85,7 +84,7 @@ namespace PoliceStation
         // SORT:
         private void sortCases_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataView dv = policeStationDataSet2.CasesTable.DefaultView;
+            DataView dv = policeStationDataSet.CasesTable.DefaultView;
             dv.Sort = sortCases.SelectedItem.ToString();
             dataGridView1.DataSource = dv.ToTable();
         }
@@ -93,7 +92,7 @@ namespace PoliceStation
         // FILTERS:
         private void filterCases_Click(object sender, EventArgs e)
         {
-            DataView dv = policeStationDataSet2.CasesTable.DefaultView;
+            DataView dv = policeStationDataSet.CasesTable.DefaultView;
             string filterText = noFilter.Text.Trim();
 
             if (!string.IsNullOrEmpty(filterText))
@@ -110,7 +109,7 @@ namespace PoliceStation
 
         private void typeOfCaseFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataView dv = policeStationDataSet2.CasesTable.DefaultView;
+            DataView dv = policeStationDataSet.CasesTable.DefaultView;
             string selectedValue = typeOfCaseFilter.SelectedItem?.ToString();
 
             if (!string.IsNullOrEmpty(selectedValue))
@@ -127,7 +126,7 @@ namespace PoliceStation
 
         private void statusFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataView dv = policeStationDataSet2.CasesTable.DefaultView;
+            DataView dv = policeStationDataSet.CasesTable.DefaultView;
             string selectedValue = statusFilter.SelectedItem?.ToString();
 
             if (!string.IsNullOrEmpty(selectedValue))
@@ -144,7 +143,7 @@ namespace PoliceStation
 
         private void removeFilterCases_Click(object sender, EventArgs e)
         {
-            DataView dv = policeStationDataSet2.CasesTable.DefaultView;
+            DataView dv = policeStationDataSet.CasesTable.DefaultView;
             dv.RowFilter = string.Empty;
 
             dataGridView1.DataSource = dv.ToTable();

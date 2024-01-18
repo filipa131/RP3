@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TextBox policeInventory;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
-            this.inventoryTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.policeStationDataSet = new PoliceStation.PoliceStationDataSet();
             this.filterInventory = new System.Windows.Forms.Button();
             this.sNoFilter = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,22 +46,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.deleteInventory = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.inventoryTableTableAdapter = new PoliceStation.PoliceStationDataSetTableAdapters.InventoryTableTableAdapter();
             this.removeFilterInventory = new System.Windows.Forms.Button();
             this.printInventory = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.label6 = new System.Windows.Forms.Label();
             this.sortInventory = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.policeStationDataSet = new PoliceStation.PoliceStationDataSet();
+            this.inventoryTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.inventoryTableTableAdapter = new PoliceStation.PoliceStationDataSetTableAdapters.InventoryTableTableAdapter();
             this.sNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.policeInventoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inventoryTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             policeInventory = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // policeInventory
@@ -74,16 +74,6 @@
             policeInventory.Name = "policeInventory";
             policeInventory.Size = new System.Drawing.Size(164, 26);
             policeInventory.TabIndex = 44;
-            // 
-            // inventoryTableBindingSource
-            // 
-            this.inventoryTableBindingSource.DataMember = "InventoryTable";
-            this.inventoryTableBindingSource.DataSource = this.policeStationDataSet;
-            // 
-            // policeStationDataSet
-            // 
-            this.policeStationDataSet.DataSetName = "PoliceStationDataSet";
-            this.policeStationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // filterInventory
             // 
@@ -265,33 +255,6 @@
             this.deleteInventory.UseVisualStyleBackColor = true;
             this.deleteInventory.Click += new System.EventHandler(this.deleteInventory_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sNoDataGridViewTextBoxColumn,
-            this.policeInventoryDataGridViewTextBoxColumn,
-            this.inventoryTypeDataGridViewTextBoxColumn,
-            this.quantityDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.inventoryTableBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(280, 280);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(985, 700);
-            this.dataGridView1.TabIndex = 56;
-            // 
-            // inventoryTableTableAdapter
-            // 
-            this.inventoryTableTableAdapter.ClearBeforeFill = true;
-            // 
             // removeFilterInventory
             // 
             this.removeFilterInventory.AutoSize = true;
@@ -356,6 +319,41 @@
             this.sortInventory.TabIndex = 63;
             this.sortInventory.SelectedIndexChanged += new System.EventHandler(this.sortInventory_SelectedIndexChanged);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sNoDataGridViewTextBoxColumn,
+            this.policeInventoryDataGridViewTextBoxColumn,
+            this.inventoryTypeDataGridViewTextBoxColumn,
+            this.quantityDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.inventoryTableBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(280, 280);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(985, 700);
+            this.dataGridView1.TabIndex = 65;
+            // 
+            // policeStationDataSet
+            // 
+            this.policeStationDataSet.DataSetName = "PoliceStationDataSet";
+            this.policeStationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // inventoryTableBindingSource
+            // 
+            this.inventoryTableBindingSource.DataMember = "InventoryTable";
+            this.inventoryTableBindingSource.DataSource = this.policeStationDataSet;
+            // 
+            // inventoryTableTableAdapter
+            // 
+            this.inventoryTableTableAdapter.ClearBeforeFill = true;
+            // 
             // sNoDataGridViewTextBoxColumn
             // 
             this.sNoDataGridViewTextBoxColumn.DataPropertyName = "S No";
@@ -398,11 +396,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(1278, 1044);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.sortInventory);
             this.Controls.Add(this.printInventory);
             this.Controls.Add(this.removeFilterInventory);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.deleteInventory);
             this.Controls.Add(this.filterInventory);
             this.Controls.Add(this.sNoFilter);
@@ -423,9 +421,9 @@
             this.Name = "Form4";
             this.Text = "Inventory";
             this.Load += new System.EventHandler(this.Form4_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryTableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -448,16 +446,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button deleteInventory;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private PoliceStationDataSet policeStationDataSet;
-        private System.Windows.Forms.BindingSource inventoryTableBindingSource;
-        private PoliceStationDataSetTableAdapters.InventoryTableTableAdapter inventoryTableTableAdapter;
         private System.Windows.Forms.Button removeFilterInventory;
         private System.Windows.Forms.Button printInventory;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox sortInventory;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private PoliceStationDataSet policeStationDataSet;
+        private System.Windows.Forms.BindingSource inventoryTableBindingSource;
+        private PoliceStationDataSetTableAdapters.InventoryTableTableAdapter inventoryTableTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn sNoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn policeInventoryDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn inventoryTypeDataGridViewTextBoxColumn;

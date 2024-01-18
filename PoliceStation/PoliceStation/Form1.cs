@@ -29,30 +29,26 @@ namespace PoliceStation
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'policeStationDataSet4.ShiftsTable' table. You can move, or remove it, as needed.
-            //this.shiftsTableTableAdapter.Fill(this.policeStationDataSet4.ShiftsTable);
-            // TODO: This line of code loads data into the 'policeStationDataSet3.EmployeesTable' table. You can move, or remove it, as needed.
-            this.employeesTableTableAdapter1.Fill(this.policeStationDataSet3.EmployeesTable);
             // TODO: This line of code loads data into the 'policeStationDataSet.EmployeesTable' table. You can move, or remove it, as needed.
-            //this.employeesTableTableAdapter.Fill(this.policeStationDataSet.EmployeesTable);
+            this.employeesTableTableAdapter.Fill(this.policeStationDataSet.EmployeesTable);
         }
 
         // ADD, SAVE, DELETE:
         private void addEmployee_Click(object sender, EventArgs e)
         {
-            employeesTableBindingSource1.AddNew();
+            employeesTableBindingSource.AddNew();
         }
 
         private void saveEmployee_Click(object sender, EventArgs e)
         {
             try
             {
-                employeesTableBindingSource1.EndEdit();
-                employeesTableTableAdapter1.Update(policeStationDataSet3.EmployeesTable);
+                employeesTableBindingSource.EndEdit();
+                employeesTableTableAdapter.Update(policeStationDataSet.EmployeesTable);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"This ID already exists.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -60,8 +56,8 @@ namespace PoliceStation
         {
             try
             {
-                employeesTableBindingSource1.RemoveCurrent();
-                employeesTableTableAdapter1.Update(policeStationDataSet3.EmployeesTable);
+                employeesTableBindingSource.RemoveCurrent();
+                employeesTableTableAdapter.Update(policeStationDataSet.EmployeesTable);
             }
             catch (Exception ex)
             {
