@@ -69,6 +69,7 @@
             this.dateOfBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hourlyRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeesTableTableAdapter1 = new PoliceStation.PoliceStationDataSet3TableAdapters.EmployeesTableTableAdapter();
+            this.shiftsTableTableAdapter = new PoliceStation.PoliceStationDataSet4TableAdapters.ShiftsTableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.employeesTableBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesTableBindingSource)).BeginInit();
@@ -470,6 +471,10 @@
             // 
             this.employeesTableTableAdapter1.ClearBeforeFill = true;
             // 
+            // shiftsTableTableAdapter
+            // 
+            this.shiftsTableTableAdapter.ClearBeforeFill = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -558,6 +563,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn departmentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateOfBirthDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hourlyRateDataGridViewTextBoxColumn;
+        private PoliceStationDataSet4TableAdapters.ShiftsTableTableAdapter shiftsTableTableAdapter;
     }
 }
 

@@ -29,6 +29,8 @@ namespace PoliceStation
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'policeStationDataSet4.ShiftsTable' table. You can move, or remove it, as needed.
+            //this.shiftsTableTableAdapter.Fill(this.policeStationDataSet4.ShiftsTable);
             // TODO: This line of code loads data into the 'policeStationDataSet3.EmployeesTable' table. You can move, or remove it, as needed.
             this.employeesTableTableAdapter1.Fill(this.policeStationDataSet3.EmployeesTable);
             // TODO: This line of code loads data into the 'policeStationDataSet.EmployeesTable' table. You can move, or remove it, as needed.

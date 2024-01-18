@@ -57,23 +57,27 @@
             this.label5 = new System.Windows.Forms.Label();
             this.idFilter = new System.Windows.Forms.TextBox();
             this.dateFilter = new System.Windows.Forms.DateTimePicker();
+            this.policeStationDataSet5 = new PoliceStation.PoliceStationDataSet5();
+            this.shiftsTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.shiftsTableTableAdapter1 = new PoliceStation.PoliceStationDataSet5TableAdapters.ShiftsTableTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.shiftDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            idShifts = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.shiftsTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shiftsTableBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // idShifts
             // 
-            this.idShifts.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.shiftsTableBindingSource, "ID", true));
-            this.idShifts.Location = new System.Drawing.Point(19, 192);
-            this.idShifts.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.idShifts.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.shiftsTableBindingSource1, "ID", true));
+            this.idShifts.Location = new System.Drawing.Point(28, 295);
+            this.idShifts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.idShifts.Name = "idShifts";
-            this.idShifts.Size = new System.Drawing.Size(111, 20);
+            this.idShifts.Size = new System.Drawing.Size(164, 26);
             this.idShifts.TabIndex = 60;
             // 
             // shiftsTableBindingSource
@@ -94,10 +98,10 @@
             // deleteShift
             // 
             this.deleteShift.AutoSize = true;
-            this.deleteShift.Location = new System.Drawing.Point(51, 402);
-            this.deleteShift.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.deleteShift.Location = new System.Drawing.Point(76, 618);
+            this.deleteShift.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteShift.Name = "deleteShift";
-            this.deleteShift.Size = new System.Drawing.Size(50, 23);
+            this.deleteShift.Size = new System.Drawing.Size(75, 35);
             this.deleteShift.TabIndex = 66;
             this.deleteShift.Text = "Delete";
             this.deleteShift.UseVisualStyleBackColor = true;
@@ -106,10 +110,10 @@
             // saveShift
             // 
             this.saveShift.AutoSize = true;
-            this.saveShift.Location = new System.Drawing.Point(89, 367);
-            this.saveShift.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.saveShift.Location = new System.Drawing.Point(134, 565);
+            this.saveShift.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saveShift.Name = "saveShift";
-            this.saveShift.Size = new System.Drawing.Size(50, 23);
+            this.saveShift.Size = new System.Drawing.Size(75, 35);
             this.saveShift.TabIndex = 65;
             this.saveShift.Text = "Save";
             this.saveShift.UseVisualStyleBackColor = true;
@@ -118,10 +122,10 @@
             // addShift
             // 
             this.addShift.AutoSize = true;
-            this.addShift.Location = new System.Drawing.Point(21, 367);
-            this.addShift.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.addShift.Location = new System.Drawing.Point(32, 565);
+            this.addShift.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addShift.Name = "addShift";
-            this.addShift.Size = new System.Drawing.Size(50, 23);
+            this.addShift.Size = new System.Drawing.Size(75, 35);
             this.addShift.TabIndex = 64;
             this.addShift.Text = "Add";
             this.addShift.UseVisualStyleBackColor = true;
@@ -129,17 +133,17 @@
             // 
             // shift
             // 
-            this.shift.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.shiftsTableBindingSource, "Shift", true));
+            this.shift.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.shiftsTableBindingSource1, "Shift", true));
             this.shift.FormattingEnabled = true;
             this.shift.Items.AddRange(new object[] {
             "Night Shift ",
             "Morning Shift ",
             "Daytime Shift ",
             "Evening Shift"});
-            this.shift.Location = new System.Drawing.Point(21, 253);
-            this.shift.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.shift.Location = new System.Drawing.Point(32, 389);
+            this.shift.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.shift.Name = "shift";
-            this.shift.Size = new System.Drawing.Size(111, 21);
+            this.shift.Size = new System.Drawing.Size(164, 28);
             this.shift.TabIndex = 59;
             // 
             // label2
@@ -147,10 +151,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(18, 231);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(27, 355);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 14);
+            this.label2.Size = new System.Drawing.Size(51, 22);
             this.label2.TabIndex = 57;
             this.label2.Text = "Shift";
             // 
@@ -159,20 +162,19 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(18, 168);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(27, 258);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 14);
+            this.label1.Size = new System.Drawing.Size(32, 22);
             this.label1.TabIndex = 56;
             this.label1.Text = "ID";
             // 
             // dateShift
             // 
-            this.dateShift.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.shiftsTableBindingSource, "Date", true));
-            this.dateShift.Location = new System.Drawing.Point(21, 319);
-            this.dateShift.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.dateShift.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.shiftsTableBindingSource1, "Date", true));
+            this.dateShift.Location = new System.Drawing.Point(32, 491);
+            this.dateShift.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateShift.Name = "dateShift";
-            this.dateShift.Size = new System.Drawing.Size(135, 20);
+            this.dateShift.Size = new System.Drawing.Size(200, 26);
             this.dateShift.TabIndex = 68;
             // 
             // label3
@@ -180,20 +182,19 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Yellow;
-            this.label3.Location = new System.Drawing.Point(18, 296);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(27, 455);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 14);
+            this.label3.Size = new System.Drawing.Size(53, 22);
             this.label3.TabIndex = 67;
             this.label3.Text = "Date";
             // 
             // removeFilterShifts
             // 
             this.removeFilterShifts.AutoSize = true;
-            this.removeFilterShifts.Location = new System.Drawing.Point(74, 645);
-            this.removeFilterShifts.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.removeFilterShifts.Location = new System.Drawing.Point(111, 992);
+            this.removeFilterShifts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.removeFilterShifts.Name = "removeFilterShifts";
-            this.removeFilterShifts.Size = new System.Drawing.Size(82, 23);
+            this.removeFilterShifts.Size = new System.Drawing.Size(123, 35);
             this.removeFilterShifts.TabIndex = 72;
             this.removeFilterShifts.Text = "Remove Filter";
             this.removeFilterShifts.UseVisualStyleBackColor = true;
@@ -207,10 +208,10 @@
             "Morning Shift ",
             "Daytime Shift ",
             "Evening Shift"});
-            this.shiftFilter.Location = new System.Drawing.Point(21, 538);
-            this.shiftFilter.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.shiftFilter.Location = new System.Drawing.Point(32, 828);
+            this.shiftFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.shiftFilter.Name = "shiftFilter";
-            this.shiftFilter.Size = new System.Drawing.Size(111, 21);
+            this.shiftFilter.Size = new System.Drawing.Size(164, 28);
             this.shiftFilter.TabIndex = 70;
             this.shiftFilter.SelectedIndexChanged += new System.EventHandler(this.shiftFilter_SelectedIndexChanged);
             // 
@@ -219,10 +220,9 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Yellow;
-            this.label8.Location = new System.Drawing.Point(18, 517);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(27, 795);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 14);
+            this.label8.Size = new System.Drawing.Size(131, 22);
             this.label8.TabIndex = 69;
             this.label8.Text = "Filter by Shift";
             // 
@@ -231,10 +231,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Yellow;
-            this.label4.Location = new System.Drawing.Point(18, 573);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(27, 882);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 14);
+            this.label4.Size = new System.Drawing.Size(133, 22);
             this.label4.TabIndex = 73;
             this.label4.Text = "Filter by Date";
             // 
@@ -250,23 +249,23 @@
             this.iDDataGridViewTextBoxColumn,
             this.shiftDataGridViewTextBoxColumn,
             this.dateDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.shiftsTableBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(187, 182);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.dataGridView1.DataSource = this.shiftsTableBindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(280, 280);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(657, 455);
+            this.dataGridView1.Size = new System.Drawing.Size(986, 700);
             this.dataGridView1.TabIndex = 75;
             // 
             // printShifts
             // 
             this.printShifts.AutoSize = true;
-            this.printShifts.Location = new System.Drawing.Point(793, 645);
-            this.printShifts.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.printShifts.Location = new System.Drawing.Point(1190, 992);
+            this.printShifts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.printShifts.Name = "printShifts";
-            this.printShifts.Size = new System.Drawing.Size(50, 23);
+            this.printShifts.Size = new System.Drawing.Size(75, 35);
             this.printShifts.TabIndex = 76;
             this.printShifts.Text = "Print";
             this.printShifts.UseVisualStyleBackColor = true;
@@ -295,10 +294,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Yellow;
-            this.label6.Location = new System.Drawing.Point(184, 156);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(276, 240);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 14);
+            this.label6.Size = new System.Drawing.Size(48, 22);
             this.label6.TabIndex = 79;
             this.label6.Text = "Sort";
             // 
@@ -309,20 +307,20 @@
             "ID",
             "Shift",
             "Date"});
-            this.sortShifts.Location = new System.Drawing.Point(221, 155);
-            this.sortShifts.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.sortShifts.Location = new System.Drawing.Point(332, 238);
+            this.sortShifts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sortShifts.Name = "sortShifts";
-            this.sortShifts.Size = new System.Drawing.Size(82, 21);
+            this.sortShifts.Size = new System.Drawing.Size(121, 28);
             this.sortShifts.TabIndex = 80;
             this.sortShifts.SelectedIndexChanged += new System.EventHandler(this.sortShifts_SelectedIndexChanged);
             // 
             // filterShifts
             // 
             this.filterShifts.AutoSize = true;
-            this.filterShifts.Location = new System.Drawing.Point(19, 645);
-            this.filterShifts.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.filterShifts.Location = new System.Drawing.Point(28, 992);
+            this.filterShifts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.filterShifts.Name = "filterShifts";
-            this.filterShifts.Size = new System.Drawing.Size(50, 23);
+            this.filterShifts.Size = new System.Drawing.Size(75, 35);
             this.filterShifts.TabIndex = 71;
             this.filterShifts.Text = "Filter";
             this.filterShifts.UseVisualStyleBackColor = true;
@@ -333,29 +331,42 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Yellow;
-            this.label5.Location = new System.Drawing.Point(18, 462);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(27, 711);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 14);
+            this.label5.Size = new System.Drawing.Size(112, 22);
             this.label5.TabIndex = 81;
             this.label5.Text = "Filter by ID";
             // 
             // idFilter
             // 
-            this.idFilter.Location = new System.Drawing.Point(21, 487);
-            this.idFilter.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.idFilter.Location = new System.Drawing.Point(32, 749);
+            this.idFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.idFilter.Name = "idFilter";
-            this.idFilter.Size = new System.Drawing.Size(109, 20);
+            this.idFilter.Size = new System.Drawing.Size(162, 26);
             this.idFilter.TabIndex = 82;
             // 
             // dateFilter
             // 
-            this.dateFilter.Location = new System.Drawing.Point(21, 599);
-            this.dateFilter.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.dateFilter.Location = new System.Drawing.Point(32, 922);
+            this.dateFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateFilter.Name = "dateFilter";
-            this.dateFilter.Size = new System.Drawing.Size(135, 20);
+            this.dateFilter.Size = new System.Drawing.Size(200, 26);
             this.dateFilter.TabIndex = 83;
             this.dateFilter.ValueChanged += new System.EventHandler(this.dateFilter_ValueChanged);
+            // 
+            // policeStationDataSet5
+            // 
+            this.policeStationDataSet5.DataSetName = "PoliceStationDataSet5";
+            this.policeStationDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // shiftsTableBindingSource1
+            // 
+            this.shiftsTableBindingSource1.DataMember = "ShiftsTable";
+            this.shiftsTableBindingSource1.DataSource = this.policeStationDataSet5;
+            // 
+            // shiftsTableTableAdapter1
+            // 
+            this.shiftsTableTableAdapter1.ClearBeforeFill = true;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -364,7 +375,6 @@
             this.iDDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
             this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // shiftDataGridViewTextBoxColumn
             // 
@@ -373,7 +383,6 @@
             this.shiftDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.shiftDataGridViewTextBoxColumn.Name = "shiftDataGridViewTextBoxColumn";
             this.shiftDataGridViewTextBoxColumn.ReadOnly = true;
-            this.shiftDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dateDataGridViewTextBoxColumn
             // 
@@ -382,14 +391,13 @@
             this.dateDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
-            this.ClientSize = new System.Drawing.Size(852, 487);
+            this.ClientSize = new System.Drawing.Size(1278, 749);
             this.Controls.Add(this.dateFilter);
             this.Controls.Add(this.idFilter);
             this.Controls.Add(this.label5);
@@ -411,7 +419,7 @@
             this.Controls.Add(this.shift);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form2";
             this.Text = "Shifts";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -419,6 +427,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shiftsTableBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -453,6 +463,9 @@
         private System.Windows.Forms.TextBox idFilter;
         private System.Windows.Forms.DateTimePicker dateFilter;
         private System.Windows.Forms.TextBox idShifts;
+        private PoliceStationDataSet5 policeStationDataSet5;
+        private System.Windows.Forms.BindingSource shiftsTableBindingSource1;
+        private PoliceStationDataSet5TableAdapters.ShiftsTableTableAdapter shiftsTableTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn shiftDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
