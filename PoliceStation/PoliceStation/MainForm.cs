@@ -15,6 +15,10 @@ namespace PoliceStation
         private Form activeForm;
         private bool loggedIn;
         private bool writeAccess;
+
+        private string connectionString = "Data Source=.\\SQLEXPRESS;" +
+            "Initial Catalog=PoliceStation;Integrated Security=True";
+
         public MainForm()
         {
             InitializeComponent();
@@ -42,7 +46,7 @@ namespace PoliceStation
 
         private void shiftsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenForm(new Form2(writeAccess));
+            OpenForm(new Form2(writeAccess, connectionString));
         }
 
         private void casesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -71,10 +75,13 @@ namespace PoliceStation
 
             labelMsg.Text = "Enter employee ID and password to log in.";
             labelName.Text = "";
-            activeForm.Close();
-        }
 
-        string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=PoliceStation;Integrated Security=True";
+            if (activeForm != null)
+            {
+                activeForm.Close();
+                activeForm = null;
+            }
+        }
 
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
@@ -86,7 +93,7 @@ namespace PoliceStation
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("ID", textBoxID.Text);
                 SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read() && reader["Password"].ToString() == textBoxPassword.Text) 
+                if (reader.Read() && reader["Password"].ToString() == textBoxPassword.Text)
                 {
                     loggedIn = true;
                     writeAccess = Convert.ToBoolean(reader["Write Access"]);

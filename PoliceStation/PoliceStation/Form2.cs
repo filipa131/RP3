@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PoliceStation
 {
     public partial class Form2 : Form
     {
-        public Form2(bool writeAccess)
+        private string connectionString;
+        public Form2(bool writeAccess, string connectionString)
         {
             InitializeComponent();
             shift.Enabled = writeAccess;
@@ -20,6 +23,28 @@ namespace PoliceStation
             addShift.Enabled = writeAccess;
             saveShift.Enabled = writeAccess;
             deleteShift.Enabled = writeAccess;
+            this.connectionString = connectionString;
+        }
+
+        private bool CheckEmployeeID(Int32 id)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Name" +
+                    " FROM [PoliceStation].[dbo].[EmployeesTable] WHERE ID=@ID", conn);
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("ID", id);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read()) 
+                { 
+                    return true; 
+                }
+                else 
+                { 
+                    return false; 
+                }
+            }
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -32,16 +57,22 @@ namespace PoliceStation
         // ADD, SAVE, DELETE:
         private void addShift_Click(object sender, EventArgs e)
         {
-            shiftsTableBindingSource.AddNew();
+            if (CheckEmployeeID(Convert.ToInt32(idShifts.Text)))
+            {
+                shiftsTableBindingSource.AddNew();
+            }
         }
 
         private void saveShift_Click(object sender, EventArgs e)
         {
             try
             {
-                shiftsTableBindingSource.EndEdit();
-                shiftsTableTableAdapter.Update(policeStationDataSet1.ShiftsTable);
-                MessageBox.Show("Data saved successfully.");
+                if (CheckEmployeeID(Convert.ToInt32(idShifts.Text)))
+                {
+                    shiftsTableBindingSource.EndEdit();
+                    shiftsTableTableAdapter.Update(policeStationDataSet1.ShiftsTable);
+                    MessageBox.Show("Data saved successfully.");
+                }
             }
             catch (Exception ex)
             {
