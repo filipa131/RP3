@@ -48,7 +48,7 @@ CREATE TABLE [dbo].[EmployeesTable](
 	[Department] [nchar](100) NOT NULL,
 	[Date of Birth] [date] NOT NULL,
 	[Hourly Rate] [money] NOT NULL,
-	[Write Access] [bit] NOT NULL,
+	[Write Access] [bit],
 	[Password] [nvarchar](40) NOT NULL,
  CONSTRAINT [PK_EmployeesTable] PRIMARY KEY CLUSTERED 
 (
