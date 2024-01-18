@@ -104,6 +104,6 @@ GO
 CREATE TABLE [dbo].[ShiftsTable](
 	[ID] [bigint] NOT NULL,
 	[Shift] [nchar](100) NOT NULL,
-	[Date] [date] NOT ANSI_NULLS
+	[Date] [date] NOT NULL
 ) ON [PRIMARY]
 GO
