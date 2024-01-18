@@ -63,12 +63,12 @@
             this.password = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.employeesTableTableAdapter1 = new PoliceStation.PoliceStationDataSet3TableAdapters.EmployeesTableTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateOfBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hourlyRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeesTableTableAdapter1 = new PoliceStation.PoliceStationDataSet3TableAdapters.EmployeesTableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.employeesTableBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesTableBindingSource)).BeginInit();
@@ -409,6 +409,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
@@ -425,10 +426,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(986, 700);
             this.dataGridView1.TabIndex = 70;
             // 
-            // employeesTableTableAdapter1
-            // 
-            this.employeesTableTableAdapter1.ClearBeforeFill = true;
-            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
@@ -436,7 +433,6 @@
             this.iDDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
             this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Width = 150;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -445,7 +441,6 @@
             this.nameDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 150;
             // 
             // departmentDataGridViewTextBoxColumn
             // 
@@ -454,7 +449,6 @@
             this.departmentDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.departmentDataGridViewTextBoxColumn.Name = "departmentDataGridViewTextBoxColumn";
             this.departmentDataGridViewTextBoxColumn.ReadOnly = true;
-            this.departmentDataGridViewTextBoxColumn.Width = 150;
             // 
             // dateOfBirthDataGridViewTextBoxColumn
             // 
@@ -463,7 +457,6 @@
             this.dateOfBirthDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.dateOfBirthDataGridViewTextBoxColumn.Name = "dateOfBirthDataGridViewTextBoxColumn";
             this.dateOfBirthDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dateOfBirthDataGridViewTextBoxColumn.Width = 150;
             // 
             // hourlyRateDataGridViewTextBoxColumn
             // 
@@ -472,7 +465,10 @@
             this.hourlyRateDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.hourlyRateDataGridViewTextBoxColumn.Name = "hourlyRateDataGridViewTextBoxColumn";
             this.hourlyRateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.hourlyRateDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // employeesTableTableAdapter1
+            // 
+            this.employeesTableTableAdapter1.ClearBeforeFill = true;
             // 
             // Form1
             // 
