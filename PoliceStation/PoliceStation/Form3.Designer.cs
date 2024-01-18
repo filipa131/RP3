@@ -54,17 +54,17 @@
             this.removeFilterCases = new System.Windows.Forms.Button();
             this.filterCases = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.noDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeOfCaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateOfModificationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.casesTableTableAdapter = new PoliceStation.PoliceStationDataSet2TableAdapters.CasesTableTableAdapter();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.sortCases = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.noFilter = new System.Windows.Forms.TextBox();
+            this.noDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeOfCaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateOfModificationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             No = new System.Windows.Forms.TextBox();
             description = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.casesTableBindingSource)).BeginInit();
@@ -374,46 +374,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(985, 700);
             this.dataGridView1.TabIndex = 92;
             // 
-            // noDataGridViewTextBoxColumn
-            // 
-            this.noDataGridViewTextBoxColumn.DataPropertyName = "No";
-            this.noDataGridViewTextBoxColumn.HeaderText = "No";
-            this.noDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.noDataGridViewTextBoxColumn.Name = "noDataGridViewTextBoxColumn";
-            this.noDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // typeOfCaseDataGridViewTextBoxColumn
-            // 
-            this.typeOfCaseDataGridViewTextBoxColumn.DataPropertyName = "Type of Case";
-            this.typeOfCaseDataGridViewTextBoxColumn.HeaderText = "Type of Case";
-            this.typeOfCaseDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.typeOfCaseDataGridViewTextBoxColumn.Name = "typeOfCaseDataGridViewTextBoxColumn";
-            this.typeOfCaseDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.descriptionDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dateOfModificationDataGridViewTextBoxColumn
-            // 
-            this.dateOfModificationDataGridViewTextBoxColumn.DataPropertyName = "Date of Modification";
-            this.dateOfModificationDataGridViewTextBoxColumn.HeaderText = "Date of Modification";
-            this.dateOfModificationDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.dateOfModificationDataGridViewTextBoxColumn.Name = "dateOfModificationDataGridViewTextBoxColumn";
-            this.dateOfModificationDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // casesTableTableAdapter
             // 
             this.casesTableTableAdapter.ClearBeforeFill = true;
@@ -465,6 +425,51 @@
             this.noFilter.Name = "noFilter";
             this.noFilter.Size = new System.Drawing.Size(164, 26);
             this.noFilter.TabIndex = 96;
+            // 
+            // noDataGridViewTextBoxColumn
+            // 
+            this.noDataGridViewTextBoxColumn.DataPropertyName = "No";
+            this.noDataGridViewTextBoxColumn.HeaderText = "No";
+            this.noDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.noDataGridViewTextBoxColumn.Name = "noDataGridViewTextBoxColumn";
+            this.noDataGridViewTextBoxColumn.ReadOnly = true;
+            this.noDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // typeOfCaseDataGridViewTextBoxColumn
+            // 
+            this.typeOfCaseDataGridViewTextBoxColumn.DataPropertyName = "Type of Case";
+            this.typeOfCaseDataGridViewTextBoxColumn.HeaderText = "Type of Case";
+            this.typeOfCaseDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.typeOfCaseDataGridViewTextBoxColumn.Name = "typeOfCaseDataGridViewTextBoxColumn";
+            this.typeOfCaseDataGridViewTextBoxColumn.ReadOnly = true;
+            this.typeOfCaseDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            this.statusDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descriptionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dateOfModificationDataGridViewTextBoxColumn
+            // 
+            this.dateOfModificationDataGridViewTextBoxColumn.DataPropertyName = "Date of Modification";
+            this.dateOfModificationDataGridViewTextBoxColumn.HeaderText = "Date of Modification";
+            this.dateOfModificationDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.dateOfModificationDataGridViewTextBoxColumn.Name = "dateOfModificationDataGridViewTextBoxColumn";
+            this.dateOfModificationDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dateOfModificationDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Form3
             // 
@@ -534,15 +539,15 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource casesTableBindingSource;
         private PoliceStationDataSet2TableAdapters.CasesTableTableAdapter casesTableTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeOfCaseDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateOfModificationDataGridViewTextBoxColumn;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.ComboBox sortCases;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox noFilter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeOfCaseDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateOfModificationDataGridViewTextBoxColumn;
     }
 }
