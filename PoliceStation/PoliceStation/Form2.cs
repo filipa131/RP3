@@ -82,7 +82,7 @@ namespace PoliceStation
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Person with this ID already has a shift on that date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

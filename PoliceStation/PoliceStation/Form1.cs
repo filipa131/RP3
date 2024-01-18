@@ -52,7 +52,7 @@ namespace PoliceStation
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"This ID already exists.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
