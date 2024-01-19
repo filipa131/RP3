@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace PoliceStation
 {
@@ -69,6 +70,10 @@ namespace PoliceStation
             Font titleFont = new Font("Arial", 16, FontStyle.Bold);
             string title = "Cases";
             e.Graphics.DrawString(title, titleFont, Brushes.Black, new PointF(50, 30));
+
+            string desc = Interaction.InputBox("Report description:", "Report");
+            Font bodyFont = new Font("Arial", 12);
+            e.Graphics.DrawString(desc, bodyFont, Brushes.Black, new PointF(50, 575));
 
             Bitmap imagebmp = new Bitmap(dataGridView1.Width, dataGridView1.Height);
             dataGridView1.DrawToBitmap(imagebmp, new Rectangle(0, 0, dataGridView1.Width, dataGridView1.Height));

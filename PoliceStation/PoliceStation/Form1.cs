@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Microsoft.VisualBasic;
 
 namespace PoliceStation
 {
     public partial class Form1 : Form
     {
         private Form currentContentForm;
+
         public Form1(bool writeAccess)
         {
             InitializeComponent();
@@ -68,27 +69,27 @@ namespace PoliceStation
         }
 
         // PRINT:
-        private void printEmployees_Click(object sender, EventArgs e)
-        {
-            printPreviewDialog1.Document = printDocument1;
-            printPreviewDialog1.PrintPreviewControl.Zoom = 1;
-            printPreviewDialog1.Text = "Employees";
-            printPreviewDialog1.ShowDialog();
-        }
-
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             Font titleFont = new Font("Arial", 16, FontStyle.Bold);
             string title = "Employees";
             e.Graphics.DrawString(title, titleFont, Brushes.Black, new PointF(50, 30));
 
+            string desc = Interaction.InputBox("Report description:", "Report");
+            Font bodyFont = new Font("Arial", 12);
+            e.Graphics.DrawString(desc, bodyFont, Brushes.Black, new PointF(50, 575));
+
             Bitmap imagebmp = new Bitmap(dataGridView1.Width, dataGridView1.Height);
             dataGridView1.DrawToBitmap(imagebmp, new Rectangle(0, 0, dataGridView1.Width, dataGridView1.Height));
             e.Graphics.DrawImage(imagebmp, 50, 80);
+        }
 
-            string desc = Microsoft.VisualBasic.Interaction.InputBox("Report description:", "Report");
-            Font bodyFont = new Font("Arial", 12);
-            e.Graphics.DrawString(desc, bodyFont, Brushes.Black, new PointF(50, 100));
+        private void printEmployees_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.PrintPreviewControl.Zoom = 1;
+            printPreviewDialog1.Text = "Employees";
+            printPreviewDialog1.ShowDialog();
         }
 
         // SORT:
