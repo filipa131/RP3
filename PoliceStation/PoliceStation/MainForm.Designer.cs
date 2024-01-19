@@ -42,6 +42,7 @@
             this.buttonLogIn = new System.Windows.Forms.Button();
             this.labelMsg = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -168,7 +169,7 @@
             this.buttonLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonLogIn.ForeColor = System.Drawing.Color.Yellow;
-            this.buttonLogIn.Location = new System.Drawing.Point(969, 81);
+            this.buttonLogIn.Location = new System.Drawing.Point(942, 87);
             this.buttonLogIn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonLogIn.Name = "buttonLogIn";
             this.buttonLogIn.Size = new System.Drawing.Size(112, 35);
@@ -200,12 +201,21 @@
             this.labelName.Size = new System.Drawing.Size(0, 29);
             this.labelName.TabIndex = 30;
             // 
+            // label1
+            // 
+            this.label1.Image = global::PoliceStation.Properties.Resources.nypd;
+            this.label1.Location = new System.Drawing.Point(1107, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 182);
+            this.label1.TabIndex = 31;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(1278, 1044);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.labelMsg);
             this.Controls.Add(this.buttonLogIn);
@@ -244,5 +254,6 @@
         private System.Windows.Forms.Button buttonLogIn;
         private System.Windows.Forms.Label labelMsg;
         private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label label1;
     }
 }
