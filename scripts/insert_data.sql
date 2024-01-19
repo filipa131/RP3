@@ -1,7 +1,7 @@
 INSERT INTO [dbo].[EmployeesTable] ([ID], [Name], [Department], [Date of Birth], [Hourly Rate], [Write Access], [Password])
 VALUES
     (1, 'John Doe', 'Patrol Division', '1985-04-15', 20.50, 0, 11),
-    (2, 'Jane Smith', 'Investigations Division', '1978-09-22', 25.75, 0, 22),
+    (2, 'Jane Smith', 'Investigations Division', '1978-09-22', 25.75, 1, 22),
     (3, 'Mike Johnson', 'Special Operations', '1965-07-08', 15.00, 1, 33),
     (4, 'Emily Davis', 'Highway Patrol', '1990-03-14', 22.25, 0, 44),
     (5, 'Robert White', 'Community Services', '1973-11-30', 18.50, 0, 55),
