@@ -41,21 +41,25 @@ namespace PoliceStation
 
         private void employeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            labelMsg.Text = "Form for viewing " + (writeAccess? "and editing " : "") + "the list of all current employees";
             OpenForm(new Form1(writeAccess));
         }
 
         private void shiftsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            labelMsg.Text = "Form for viewing " + (writeAccess? "and editing " : "") + "the shifts assigned to the employees";
             OpenForm(new Form2(writeAccess, connectionString));
         }
 
         private void casesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            labelMsg.Text = "Form for viewing " + (writeAccess? "and editing " : "") + "the list of all ongoing cases";
             OpenForm(new Form3(writeAccess));
         }
 
         private void inventoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            labelMsg.Text = "Form for viewing " + (writeAccess? "and editing " : "") + "the currently available inventory";
             OpenForm(new Form4(writeAccess));
         }
 
