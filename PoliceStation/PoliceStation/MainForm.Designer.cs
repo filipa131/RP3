@@ -214,7 +214,10 @@
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.labelID);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainForm";
             this.Text = "Police Station";
             this.Load += new System.EventHandler(this.MainForm_Load);

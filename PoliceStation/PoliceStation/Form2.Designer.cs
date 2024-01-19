@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.idShifts = new System.Windows.Forms.TextBox();
+            this.shiftsTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.policeStationDataSet = new PoliceStation.PoliceStationDataSet();
             this.deleteShift = new System.Windows.Forms.Button();
             this.saveShift = new System.Windows.Forms.Button();
             this.addShift = new System.Windows.Forms.Button();
@@ -53,15 +55,13 @@
             this.idFilter = new System.Windows.Forms.TextBox();
             this.dateFilter = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.policeStationDataSet = new PoliceStation.PoliceStationDataSet();
-            this.shiftsTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.shiftsTableTableAdapter = new PoliceStation.PoliceStationDataSetTableAdapters.ShiftsTableTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.shiftDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).BeginInit();
+            this.shiftsTableTableAdapter = new PoliceStation.PoliceStationDataSetTableAdapters.ShiftsTableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.shiftsTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // idShifts
@@ -72,6 +72,16 @@
             this.idShifts.Name = "idShifts";
             this.idShifts.Size = new System.Drawing.Size(164, 26);
             this.idShifts.TabIndex = 60;
+            // 
+            // shiftsTableBindingSource
+            // 
+            this.shiftsTableBindingSource.DataMember = "ShiftsTable";
+            this.shiftsTableBindingSource.DataSource = this.policeStationDataSet;
+            // 
+            // policeStationDataSet
+            // 
+            this.policeStationDataSet.DataSetName = "PoliceStationDataSet";
+            this.policeStationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // deleteShift
             // 
@@ -326,20 +336,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(985, 700);
             this.dataGridView1.TabIndex = 84;
             // 
-            // policeStationDataSet
-            // 
-            this.policeStationDataSet.DataSetName = "PoliceStationDataSet";
-            this.policeStationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // shiftsTableBindingSource
-            // 
-            this.shiftsTableBindingSource.DataMember = "ShiftsTable";
-            this.shiftsTableBindingSource.DataSource = this.policeStationDataSet;
-            // 
-            // shiftsTableTableAdapter
-            // 
-            this.shiftsTableTableAdapter.ClearBeforeFill = true;
-            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
@@ -366,6 +362,10 @@
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             this.dateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // shiftsTableTableAdapter
+            // 
+            this.shiftsTableTableAdapter.ClearBeforeFill = true;
             // 
             // Form2
             // 
@@ -394,13 +394,16 @@
             this.Controls.Add(this.shift);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form2";
             this.Text = "Shifts";
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shiftsTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

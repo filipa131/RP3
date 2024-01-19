@@ -498,7 +498,10 @@
             this.Controls.Add(this.typeOfCase);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form3";
             this.Text = "Cases";
             this.Load += new System.EventHandler(this.Form3_Load);
