@@ -24,6 +24,7 @@ namespace PoliceStation
             InitializeComponent();
         }
 
+        // Funkcija za otvaranje pojedinacnih formi 1 - 4 klikom na navigacijsku traku
         private void OpenForm(Form form)
         {
             if (activeForm != null)
@@ -39,6 +40,8 @@ namespace PoliceStation
             form.Show();
         }
 
+        // Ovisno o tome ima li prijavljeni korisnik pravo privilegiranog pristupa (write access) u zaglavlje forme
+        // stavljamo prikladan tekst
         private void employeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             labelMsg.Text = "Form for viewing " + (writeAccess? "and editing " : "") + "the list of all current employees";
@@ -63,6 +66,8 @@ namespace PoliceStation
             OpenForm(new Form4(writeAccess));
         }
 
+        // Prilikom log-outa onemogucuju se svi gumbi u navigacijskoj traci, a omogucuje se unos ID-a i lozinke te se
+        // gasi trenutna forma (ukoliko je ijedna bila otvorena) i vracamo se na pocetni ekran
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             writeAccess = false;
@@ -88,6 +93,8 @@ namespace PoliceStation
             }
         }
 
+        // Provjeravamo unesene podatke u bazi (tablica EmployeesTable) te dohvacamo podatak ima li korisnik
+        // write access i ime korisnika koje ce pisati u gornjem desnom kutu
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -106,6 +113,8 @@ namespace PoliceStation
                 }
             }
 
+            // Ako je korisnik uspjesno ulogiran, onemogucujemo formu za ulogiranje, a omogucujemo pristup svim ostalim
+            // formama putem navigacijske trake
             if (loggedIn)
             {
                 textBoxID.Enabled = false;
