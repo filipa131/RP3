@@ -28,6 +28,9 @@ namespace PoliceStation
             this.connectionString = connectionString;
         }
 
+        // Sluzi za provjeru postoji li zaposlenik sa zadanim ID-om. Ako ne postoji, onda se ne smije dodati smjena
+        // s tim ID-om. Provjeru da isti zaposlenik dvije smjene ne smije obavljati u istom danu vrsi baza, tako sto
+        // su ID i datum zajedno primarni kljuc te bi pokusaj dodavanja takvog retka izazvao gresku.
         private bool CheckEmployeeID(Int32 id)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
