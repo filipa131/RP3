@@ -15,6 +15,8 @@ namespace PoliceStation
         public Form3(bool writeAccess)
         {
             InitializeComponent();
+            No.Enabled = writeAccess;
+            description.Enabled = writeAccess;
             typeOfCase.Enabled = writeAccess;
             status.Enabled = writeAccess;
             dateShift.Enabled = writeAccess;

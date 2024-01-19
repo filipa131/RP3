@@ -130,7 +130,7 @@
             this.labelID.AutoSize = true;
             this.labelID.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelID.ForeColor = System.Drawing.Color.Yellow;
-            this.labelID.Location = new System.Drawing.Point(280, 75);
+            this.labelID.Location = new System.Drawing.Point(280, 93);
             this.labelID.Name = "labelID";
             this.labelID.Size = new System.Drawing.Size(40, 22);
             this.labelID.TabIndex = 24;
@@ -138,7 +138,7 @@
             // 
             // textBoxID
             // 
-            this.textBoxID.Location = new System.Drawing.Point(327, 72);
+            this.textBoxID.Location = new System.Drawing.Point(327, 90);
             this.textBoxID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(164, 26);
@@ -146,7 +146,7 @@
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(654, 72);
+            this.textBoxPassword.Location = new System.Drawing.Point(654, 90);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(260, 26);
@@ -157,7 +157,7 @@
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPassword.ForeColor = System.Drawing.Color.Yellow;
-            this.labelPassword.Location = new System.Drawing.Point(536, 75);
+            this.labelPassword.Location = new System.Drawing.Point(536, 93);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(103, 22);
             this.labelPassword.TabIndex = 26;
@@ -168,7 +168,7 @@
             this.buttonLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonLogIn.ForeColor = System.Drawing.Color.Yellow;
-            this.buttonLogIn.Location = new System.Drawing.Point(969, 63);
+            this.buttonLogIn.Location = new System.Drawing.Point(969, 81);
             this.buttonLogIn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonLogIn.Name = "buttonLogIn";
             this.buttonLogIn.Size = new System.Drawing.Size(112, 35);
@@ -182,7 +182,7 @@
             this.labelMsg.AutoSize = true;
             this.labelMsg.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelMsg.ForeColor = System.Drawing.Color.Yellow;
-            this.labelMsg.Location = new System.Drawing.Point(343, 125);
+            this.labelMsg.Location = new System.Drawing.Point(345, 154);
             this.labelMsg.Name = "labelMsg";
             this.labelMsg.Size = new System.Drawing.Size(525, 29);
             this.labelMsg.TabIndex = 29;

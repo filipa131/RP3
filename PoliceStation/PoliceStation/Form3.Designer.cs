@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TextBox No;
-            System.Windows.Forms.TextBox description;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            this.No = new System.Windows.Forms.TextBox();
+            this.casesTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.policeStationDataSet = new PoliceStation.PoliceStationDataSet();
+            this.description = new System.Windows.Forms.TextBox();
             this.dateShift = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.deleteShift = new System.Windows.Forms.Button();
@@ -57,39 +59,45 @@
             this.label9 = new System.Windows.Forms.Label();
             this.noFilter = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.policeStationDataSet = new PoliceStation.PoliceStationDataSet();
-            this.casesTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.casesTableTableAdapter = new PoliceStation.PoliceStationDataSetTableAdapters.CasesTableTableAdapter();
             this.noDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeOfCaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateOfModificationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            No = new System.Windows.Forms.TextBox();
-            description = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).BeginInit();
+            this.casesTableTableAdapter = new PoliceStation.PoliceStationDataSetTableAdapters.CasesTableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.casesTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // No
             // 
-            No.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casesTableBindingSource, "No", true));
-            No.Location = new System.Drawing.Point(29, 180);
-            No.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            No.Name = "No";
-            No.Size = new System.Drawing.Size(164, 26);
-            No.TabIndex = 72;
+            this.No.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casesTableBindingSource, "No", true));
+            this.No.Location = new System.Drawing.Point(29, 180);
+            this.No.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.No.Name = "No";
+            this.No.Size = new System.Drawing.Size(164, 26);
+            this.No.TabIndex = 72;
+            // 
+            // casesTableBindingSource
+            // 
+            this.casesTableBindingSource.DataMember = "CasesTable";
+            this.casesTableBindingSource.DataSource = this.policeStationDataSet;
+            // 
+            // policeStationDataSet
+            // 
+            this.policeStationDataSet.DataSetName = "PoliceStationDataSet";
+            this.policeStationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // description
             // 
-            description.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casesTableBindingSource, "Description", true));
-            description.Location = new System.Drawing.Point(35, 442);
-            description.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            description.Multiline = true;
-            description.Name = "description";
-            description.Size = new System.Drawing.Size(164, 26);
-            description.TabIndex = 81;
+            this.description.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.casesTableBindingSource, "Description", true));
+            this.description.Location = new System.Drawing.Point(35, 442);
+            this.description.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.description.Multiline = true;
+            this.description.Name = "description";
+            this.description.Size = new System.Drawing.Size(164, 26);
+            this.description.TabIndex = 81;
             // 
             // dateShift
             // 
@@ -410,20 +418,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(985, 700);
             this.dataGridView1.TabIndex = 97;
             // 
-            // policeStationDataSet
-            // 
-            this.policeStationDataSet.DataSetName = "PoliceStationDataSet";
-            this.policeStationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // casesTableBindingSource
-            // 
-            this.casesTableBindingSource.DataMember = "CasesTable";
-            this.casesTableBindingSource.DataSource = this.policeStationDataSet;
-            // 
-            // casesTableTableAdapter
-            // 
-            this.casesTableTableAdapter.ClearBeforeFill = true;
-            // 
             // noDataGridViewTextBoxColumn
             // 
             this.noDataGridViewTextBoxColumn.DataPropertyName = "No";
@@ -469,6 +463,10 @@
             this.dateOfModificationDataGridViewTextBoxColumn.ReadOnly = true;
             this.dateOfModificationDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // casesTableTableAdapter
+            // 
+            this.casesTableTableAdapter.ClearBeforeFill = true;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -487,7 +485,7 @@
             this.Controls.Add(this.typeOfCaseFilter);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
-            this.Controls.Add(description);
+            this.Controls.Add(this.description);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.status);
             this.Controls.Add(this.label4);
@@ -496,7 +494,7 @@
             this.Controls.Add(this.deleteShift);
             this.Controls.Add(this.saveShift);
             this.Controls.Add(this.addShift);
-            this.Controls.Add(No);
+            this.Controls.Add(this.No);
             this.Controls.Add(this.typeOfCase);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -504,9 +502,9 @@
             this.Name = "Form3";
             this.Text = "Cases";
             this.Load += new System.EventHandler(this.Form3_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.casesTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -547,5 +545,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateOfModificationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox No;
+        private System.Windows.Forms.TextBox description;
     }
 }

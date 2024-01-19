@@ -18,6 +18,7 @@ namespace PoliceStation
         public Form2(bool writeAccess, string connectionString)
         {
             InitializeComponent();
+            idShifts.Enabled = writeAccess;
             shift.Enabled = writeAccess;
             dateShift.Enabled = writeAccess;
             addShift.Enabled = writeAccess;

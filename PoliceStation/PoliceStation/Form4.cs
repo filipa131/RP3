@@ -16,6 +16,7 @@ namespace PoliceStation
         public Form4(bool writeAccess)
         {
             InitializeComponent();
+            policeInventory.Enabled = writeAccess;
             sNoAdd.Enabled = writeAccess;
             departmentAdd.Enabled = writeAccess;
             quantityAdd.Enabled = writeAccess;

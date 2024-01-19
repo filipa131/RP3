@@ -33,6 +33,8 @@
             this.saveEmployee = new System.Windows.Forms.Button();
             this.addEmployee = new System.Windows.Forms.Button();
             this.idAdd = new System.Windows.Forms.TextBox();
+            this.employeesTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.policeStationDataSet = new PoliceStation.PoliceStationDataSet();
             this.label5 = new System.Windows.Forms.Label();
             this.hourlyRate = new System.Windows.Forms.TextBox();
             this.name = new System.Windows.Forms.TextBox();
@@ -58,17 +60,15 @@
             this.password = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.policeStationDataSet = new PoliceStation.PoliceStationDataSet();
-            this.employeesTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeesTableTableAdapter = new PoliceStation.PoliceStationDataSetTableAdapters.EmployeesTableTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateOfBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hourlyRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).BeginInit();
+            this.employeesTableTableAdapter = new PoliceStation.PoliceStationDataSetTableAdapters.EmployeesTableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.employeesTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // saveEmployee
@@ -103,6 +103,16 @@
             this.idAdd.Name = "idAdd";
             this.idAdd.Size = new System.Drawing.Size(164, 26);
             this.idAdd.TabIndex = 24;
+            // 
+            // employeesTableBindingSource
+            // 
+            this.employeesTableBindingSource.DataMember = "EmployeesTable";
+            this.employeesTableBindingSource.DataSource = this.policeStationDataSet;
+            // 
+            // policeStationDataSet
+            // 
+            this.policeStationDataSet.DataSetName = "PoliceStationDataSet";
+            this.policeStationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label5
             // 
@@ -397,20 +407,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(985, 700);
             this.dataGridView1.TabIndex = 70;
             // 
-            // policeStationDataSet
-            // 
-            this.policeStationDataSet.DataSetName = "PoliceStationDataSet";
-            this.policeStationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeesTableBindingSource
-            // 
-            this.employeesTableBindingSource.DataMember = "EmployeesTable";
-            this.employeesTableBindingSource.DataSource = this.policeStationDataSet;
-            // 
-            // employeesTableTableAdapter
-            // 
-            this.employeesTableTableAdapter.ClearBeforeFill = true;
-            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
@@ -456,6 +452,10 @@
             this.hourlyRateDataGridViewTextBoxColumn.ReadOnly = true;
             this.hourlyRateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // employeesTableTableAdapter
+            // 
+            this.employeesTableTableAdapter.ClearBeforeFill = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -493,9 +493,9 @@
             this.Name = "Form1";
             this.Text = "Employees";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.policeStationDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -527,7 +527,6 @@
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.ComboBox sortEmployees;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox writeAccessCheckBox;
         private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -539,6 +538,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn departmentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateOfBirthDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hourlyRateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.CheckBox writeAccessCheckBox;
     }
 }
 

@@ -25,6 +25,8 @@ namespace PoliceStation
             addEmployee.Enabled = writeAccess;
             saveEmployee.Enabled = writeAccess;
             deleteEmployee.Enabled = writeAccess;
+            writeAccessCheckBox.Enabled = writeAccess;
+            password.Enabled = writeAccess;
         }
 
         private void Form1_Load(object sender, EventArgs e)
