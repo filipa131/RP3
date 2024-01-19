@@ -85,6 +85,10 @@ namespace PoliceStation
             Bitmap imagebmp = new Bitmap(dataGridView1.Width, dataGridView1.Height);
             dataGridView1.DrawToBitmap(imagebmp, new Rectangle(0, 0, dataGridView1.Width, dataGridView1.Height));
             e.Graphics.DrawImage(imagebmp, 50, 80);
+
+            string desc = Microsoft.VisualBasic.Interaction.InputBox("Report description:", "Report");
+            Font bodyFont = new Font("Arial", 12);
+            e.Graphics.DrawString(desc, bodyFont, Brushes.Black, new PointF(50, 100));
         }
 
         // SORT:
