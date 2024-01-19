@@ -70,6 +70,7 @@ namespace PoliceStation
 
             textBoxID.Enabled = true;
             textBoxPassword.Enabled = true;
+            buttonLogIn.Enabled = true;
 
             employeesToolStripMenuItem.Enabled = false;
             shiftsToolStripMenuItem.Enabled = false;
@@ -109,6 +110,7 @@ namespace PoliceStation
             {
                 textBoxID.Enabled = false;
                 textBoxPassword.Enabled = false;
+                buttonLogIn.Enabled = false;
 
                 employeesToolStripMenuItem.Enabled = true;
                 shiftsToolStripMenuItem.Enabled = true;
